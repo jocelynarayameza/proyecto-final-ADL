@@ -21,7 +21,7 @@ const Navbar = () => {
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Holi cómo estás jajajajaj
+                Holi cómo estás 2.0
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
