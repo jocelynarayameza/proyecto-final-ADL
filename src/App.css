@@ -32,9 +32,23 @@
   padding: 0;
 }
 
-#navbarConfig .textConfig {
-  font-size: 1.2rem;
+ .textConfig{
+  font-size: 1.3rem;
   font-weight: 500;
+}
+ .backHover{
+  border-radius: 10%;
+}
+.backHover:hover{
+  background-color: #323232;
+  color: #e4e4e4 !important;
+}
+
+.navbar-link.active {
+  font-weight: 600;
+  color: #323232!important;
+  border: #323232 solid 1px;
+
 }
 
 

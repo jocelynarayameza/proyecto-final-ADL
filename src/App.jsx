@@ -16,11 +16,16 @@ import Footer from './components/Footer.jsx'
 import Header from './components/Header.jsx'
 import { Routes, Route } from "react-router-dom";
 
+import { ActiveProvider } from "./context/ActiveContext.jsx";
+
 function App() {
 
   return (
     <>
-    <NavbarComponent />
+    <ActiveProvider>
+      <NavbarComponent />
+    </ActiveProvider>
+
     <Header />
     <Routes>
         <Route path="/" element={<Home />} />
