@@ -1,0 +1,80 @@
+/* Custom fonts */
+@font-face{
+  font-family: MedievalSharp;
+  src: url('../src/assets/fonts/MedievalSharp-Regular.ttf');
+}
+
+
+/* Colores de fondo y textos */
+.skyBlue {
+  background-color: #9BE8F5;
+}
+
+.redColor {
+  background-color: #ED9C9C;
+}
+
+.yellowColor {
+  background-color: #FAE5B8 ;
+}
+
+.skyBluePrice{
+  color: #68D5E8;
+}
+
+.textColor {
+  color: #323232;
+}
+
+/* CSS del Navbar */
+
+#navbarConfig{
+  padding: 0;
+}
+
+#navbarConfig .textConfig {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+
+/* CSS del header */
+
+#header {
+  margin-top: 0;
+  padding: 6rem 0 5rem 0;
+  background-image: url('./assets/img/Vivi-header.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+#header .box {
+  padding: 3rem 3rem;
+  background: linear-gradient(90.21deg, rgba(0, 0, 0, 0.5) -5.91%, rgba(0, 0, 0, 0.5) 111.58%);
+  margin: auto;
+  text-align: center;
+}
+
+#header h1 {
+  color: aliceblue;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+  font-family: 'MedievalSharp', sans-serif !important
+}
+
+#header p {
+  color: #e4e4e4;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+
+/* CSS del Footer */
+
+.footer-text{
+  text-align: center;
+}

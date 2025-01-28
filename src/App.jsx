@@ -2,7 +2,7 @@
 
 import './normalize.css'
 import './App.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Cart from './pages/Cart'
 import Home from './pages/Home'
@@ -11,7 +11,7 @@ import Register from './pages/Register'
 import MisProductos from './pages/MisProductos'
 import NuevaVenta from './pages/NuevaVenta'
 import Profile from './pages/Profile'
-import Navbar from './components/Navbar.jsx'
+import NavbarComponent from './components/NavbarComponent.jsx'
 import Footer from './components/Footer.jsx'
 import Header from './components/Header.jsx'
 import { Routes, Route } from "react-router-dom";
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-    <Navbar />
+    <NavbarComponent />
     <Header />
     <Routes>
         <Route path="/" element={<Home />} />
