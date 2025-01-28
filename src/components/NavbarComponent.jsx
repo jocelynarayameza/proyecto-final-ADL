@@ -29,7 +29,7 @@ const NavbarComponent = () => {
               height="40"
               className="d-inline-block align-top"
             />{' '}
-            FF Market
+            <span className='titleConfig'>Final fantasy Marketplace</span>
           </Navbar.Brand>
           
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="justify-content-end"/>

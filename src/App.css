@@ -89,6 +89,13 @@
 
 /* CSS del Footer */
 
+.titleConfig{
+  font-size: 2rem;
+  font-family: 'MedievalSharp', sans-serif !important;
+  margin-top: 4rem;
+
+}
+
 .footer-text{
   text-align: center;
 }
