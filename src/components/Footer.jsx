@@ -1,6 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import logo from '../assets/img/Vivi.png'
-import { Facebook,Instagram, TwitterX, Whatsapp, PinMapFill, EnvelopeFill, TelephoneFill } from 'react-bootstrap-icons';
+import logo from '../assets/img/moogle.png'
+import { Facebook,Instagram, TwitterX, PinMapFill, EnvelopeFill, TelephoneFill } from 'react-bootstrap-icons';
 
 const Footer = () => {
   return (
@@ -8,13 +8,13 @@ const Footer = () => {
       <Container>
         <Row >
           <Col sm={4}>
-           <img className="mt-5" src={logo}
-            width="100"
-            height="100"
+           <img className="mt-3 mb-0" src={logo}
+            width="200"
+            height="200"
             alt="logo"/>
           </Col>
           <Col sm={4} className='mt-3'>
-            <h5>Visitanos en nuestras redes sociales!</h5>
+            <h5>¡Visitanos en nuestras redes sociales!</h5>
             <Row xs="auto">
               <Col >
                 <Facebook size={25}/>
@@ -44,7 +44,7 @@ const Footer = () => {
             
           </Col>
           <Col sm={4} className='p-3'>
-            <h5>Tienes alguna consulta? Contactanos!</h5>
+            <h5>¿Tienes alguna consulta? ¡Contáctanos!</h5>
             <Row xs="auto">
               <Col >
                 <TelephoneFill size={25}/>
