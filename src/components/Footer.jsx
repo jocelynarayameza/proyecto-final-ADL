@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className='footer skyBlue'>
       <Container fluid>
-        <Row>
+        <Row className="justify-content-md-center">
           <Col className='mt-1' xs={12} md={4}>
             <Row>
               <Col xs={6} md={6}>
@@ -82,7 +82,7 @@ const Footer = () => {
             </Row>
           </Col>
 
-          <Row>
+          <Row >
             <Col className='footer-text'>
              <p >Todos los derechos reservados. FF Market 2025 ©</p>
             </Col>
