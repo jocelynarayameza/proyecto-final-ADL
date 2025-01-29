@@ -1,8 +1,8 @@
 
 
 import './normalize.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-
 
 import Cart from './pages/Cart'
 import Home from './pages/Home'
