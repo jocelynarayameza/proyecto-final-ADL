@@ -22,14 +22,14 @@ const Filters = () => {
           {filtros.map((filtro, index) => (
             <Form.Check
               className="pb-3"
-              key={index} // prettier-ignore
+              key={index}
               type="checkbox"
               id={index}
               label={filtro}
             />
           ))}
         </Form>
-        <hr />
+        <hr />o
         <Form.Group>
           <Form.Label>$0-100 </Form.Label>
           <Form.Range min="0" max="1000" step="10" />
