@@ -4,6 +4,23 @@
   src: url('../src/assets/fonts/MedievalSharp-Regular.ttf');
 }
 
+@font-face{
+  font-family: Acme;
+  src: url('../src/assets/fonts/Acme-Regular.ttf');
+}
+
+
+
+#titleText{
+  text-align: center;
+  font-family: "Acme";
+  margin: 1rem 0;
+}
+
+a{
+  text-decoration: none;
+}
+
 
 /* Colores de fondo y textos */
 .skyBlue {
@@ -25,6 +42,12 @@
 .textColor {
   color: #323232;
 }
+
+.whiteColor {
+  background-color: rgb(255, 255, 255);
+}
+
+
 
 /* CSS del Navbar */
 
@@ -98,4 +121,53 @@
 
 .footer-text{
   text-align: center;
+}
+
+/* CSS de formulario register y login */
+
+
+.registerLoginColor{
+  border: #ED9C9C solid 2px;
+  width: 20rem;
+}
+
+.registerLoginButton{
+  width: 20rem;
+  background-color: #9BE8F5;
+  color: #323232;
+  padding: 0;
+  border: #9BE8F5;
+}
+
+.registerLoginButtonText{
+  font-weight: 600;
+  align-self: center;
+  margin:auto;
+  padding: 0.5rem;
+}
+
+.registerLoginInput{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registerLoginInput2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.loginForm a {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-decoration:underline;
+  color:#323232;
+}
+
+.loginForm .flexbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
