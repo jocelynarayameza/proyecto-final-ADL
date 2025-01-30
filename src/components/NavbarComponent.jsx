@@ -7,11 +7,13 @@ import { ActiveContext } from '../context/ActiveContext';
 import { Link } from 'react-router-dom';
 
 import logo from '../assets/img/Vivi.png'
+import { UserContext } from '../context/UserContext';
 
 
 const NavbarComponent = () => {
+  // const {user} = useContext(UserContext)
   const userLogged = false
-  let {activeLink,setActiveLink}= useContext(ActiveContext);
+  let {activeLink,setActiveLink} = useContext(ActiveContext);
 
 
   const onUpdateActiveLink = (value)=>{

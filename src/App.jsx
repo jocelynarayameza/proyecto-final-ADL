@@ -29,7 +29,6 @@ function App() {
     </ActiveProvider>
 
     <Header />
-    <UserProvider>
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -39,7 +38,6 @@ function App() {
           <Route path="/perfil/mis-productos" element={<MisProductos />} />
           <Route path="/cart" element={<Cart />} />
       </Routes>
-    </UserProvider>
 
     
     <Footer />

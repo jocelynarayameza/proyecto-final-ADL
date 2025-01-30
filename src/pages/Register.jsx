@@ -70,17 +70,17 @@ const Register = () => {
 
               <Form.Group className="mb-3" controlId="formBasicLastName">
                 <Form.Label>Apellido</Form.Label>
-                <Form.Control className='registerLoginColor' type="text" placeholder="Ornitier" {...lastName} />
+                <Form.Control required className='registerLoginColor' type="text" placeholder="Ornitier" {...lastName} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicUsername">
                 <Form.Label>Nombre de usuario</Form.Label>
-                <Form.Control  className='registerLoginColor' type="text" placeholder="Vivi_tienda" {...username} />
+                <Form.Control required className='registerLoginColor' type="text" placeholder="Vivi_tienda" {...username} />
               </Form.Group>
 
               <FormGroup className="mb-3" controlId="formBasicBirthday">
                 <Form.Label>Fecha de nacimiento</Form.Label>
-                <Form.Control className='registerLoginColor' type="date" placeholder="Vivi_tienda" {...birthday} />
+                <Form.Control required className='registerLoginColor' type="date" placeholder="Vivi_tienda" {...birthday} />
               </FormGroup>
 
      
@@ -88,22 +88,22 @@ const Register = () => {
             <Col xs={12} md={6} className='px-5 mb-4'>
              <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Contraseña</Form.Label>
-                <Form.Control className='registerLoginColor' type="text" placeholder="Minimo 8 caracteres" {...password} />
+                <Form.Control required className='registerLoginColor' type="text" placeholder="Minimo 8 caracteres" {...password} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPasswordConfirm">
                 <Form.Label>Repite tu contraseña</Form.Label>
-                <Form.Control  className='registerLoginColor' type="text" placeholder="" {...passwordConfirm}/>
+                <Form.Control required className='registerLoginColor' type="text" placeholder="" {...passwordConfirm}/>
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Correo electronico</Form.Label>
-                <Form.Control className='registerLoginColor' type="email" placeholder="vivi@tienda.cl" {...email} />
+                <Form.Control required className='registerLoginColor' type="email" placeholder="vivi@tienda.cl" {...email} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmailConfirm">
                 <Form.Label>Repite tu correo electronico</Form.Label>
-                <Form.Control  className='registerLoginColor' type="email" placeholder="vivi@tienda.cl" {...emailConfirm} />
+                <Form.Control required className='registerLoginColor' type="email" placeholder="vivi@tienda.cl" {...emailConfirm} />
               </Form.Group>
             </Col>
           </Row>
