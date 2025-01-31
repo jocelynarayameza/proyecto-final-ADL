@@ -181,6 +181,13 @@ a{
     font-family: "Acme";
 }
 
+/* CSS Products */
+
 .img {
   height: 12rem;
 }
+.addCartButton {
+    background-color: #9BE8F5;
+    color: #323232;
+    border: #9BE8F5;
+  }
