@@ -34,7 +34,7 @@ const UserProvider = ({children}) => {
       alert("Contrasena no coincide")
     }
   
-
+  }
 
 
   return <UserContext.Provider value={{user,setUser,registerUser,logInUser}}>

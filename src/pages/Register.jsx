@@ -56,13 +56,13 @@ const Register = () => {
   }
 
   return (
-    <div className='registerForm'>
+    <div className='registerForm flexbox'>
       <h1 id='titleText'>Registrar nueva cuenta</h1>
-      <div className='yellowColor py-5 my-5'>
-        <Container className='whiteColor py-5'>
-          <Form onSubmit={handleSubmit}>
+      <div className='yellowColor py-5 my-5 '>
+        <Container className='whiteColor py-5 '>
+          <Form onSubmit={handleSubmit} >
           <Row>
-            <Col xs={12} md={6} className='px-5'>
+            <Col md={12} lg={6} className='px-5'>
               <Form.Group className="mb-3"  controlId="formBasicName">
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control required className='registerLoginColor' type="text" placeholder="Vivi" {...name} />
@@ -85,7 +85,7 @@ const Register = () => {
 
      
             </Col>
-            <Col xs={12} md={6} className='px-5 mb-4'>
+            <Col md={12} lg={6} className='px-5 mb-4'>
              <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Contraseña</Form.Label>
                 <Form.Control required className='registerLoginColor' type="text" placeholder="Minimo 8 caracteres" {...password} />
