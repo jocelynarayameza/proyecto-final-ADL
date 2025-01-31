@@ -9,7 +9,7 @@ const ProductContainer = ({ productos }) => {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className="mt-4">
         <Row>
           <Col className="col-2">
             <Filters />

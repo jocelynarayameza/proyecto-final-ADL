@@ -2,13 +2,15 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { obtenerProductos } from "../mockproducts.js";
-import { Image, Button } from "react-bootstrap";
+import { Image, Button, Col, Row, Container } from "react-bootstrap";
 const CardDetail = () => {
   const { id } = useParams();
   const [producto, setProducto] = useState({});
   const [contador, setContador] = useState(0);
   const aumentarCantidad = () => {
-    contador < producto.cantidad ? setContador(contador + 1) : setContador(contador); 
+    contador < producto.cantidad
+      ? setContador(contador + 1)
+      : setContador(contador);
   };
   const disminuirCantidad = () => {
     if (contador > 0) {
@@ -27,27 +29,39 @@ const CardDetail = () => {
 
   return (
     <>
-      <h1 className="title-acme text-center my-4">Detalle del producto</h1>
-      <div className="border border-danger-subtle w-75 m-auto my-5">
-        <div className="d-flex justify-content-evenly my-4 ">
-          <Image src={producto.foto} className="w-25"  />
-          <div>
-            <h2 className="title-acme">{producto.nombre}</h2>
-            <h1 className="text-info pb-2">Precio: ${producto.precio}</h1>
-            <h4 className="pb-2">Vendido por: {producto.vendedor}</h4>
-            <p className="pb-5">Descripción: {producto.descripcion}</p>
-            <div>
-              <p>Cantidad disponible: {producto.cantidad}</p>
-              <div className="d-flex align-items-baseline">
-                <Button variant="light" onClick={disminuirCantidad}>-</Button>
-                <p className="px-2">{contador}</p>
-                <Button variant="light" onClick={aumentarCantidad}>+</Button>
-              </div>
-              <Button variant="warning">Añadir al carrito</Button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Container>
+        <h1 className="title-acme text-center my-4">Detalle del producto</h1>
+        <Row className="justify-content-center my-5">
+          <Col className="border border-danger-subtle p-4">
+            <Row className="align-items-center my-4">
+              <Col className="text-center pe-4">
+                <Image src={producto.foto} className="w-75" />
+              </Col>
+              <Col>
+                <h2 className="title-acme">{producto.nombre}</h2>
+                <h1 className="text-info pb-2">Precio: ${producto.precio}</h1>
+                <h4 className="pb-2">Vendido por: {producto.vendedor}</h4>
+                <p className="pb-5">Descripción: {producto.descripcion}</p>
+                <div>
+                  <p>Cantidad disponible: {producto.cantidad}</p>
+                  <div className="d-flex align-items-baseline">
+                    <Button variant="light" onClick={disminuirCantidad}>
+                      -
+                    </Button>
+                    <p className="px-2">{contador}</p>
+                    <Button variant="light" onClick={aumentarCantidad}>
+                      +
+                    </Button>
+                  </div>
+                  <Button className="addCartButton mt-3">
+                    Agregar al carrito
+                  </Button>
+                </div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
