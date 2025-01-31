@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { CartFill } from 'react-bootstrap-icons';
 import { ActiveContext } from '../context/ActiveContext';
 import { Link } from 'react-router-dom';
@@ -11,14 +11,26 @@ import { UserContext } from '../context/UserContext';
 
 
 const NavbarComponent = () => {
-  // const {user} = useContext(UserContext)
-  const userLogged = false
+  let {userLogged} = useContext(UserContext)
+  console.log(userLogged);
+  
   let {activeLink,setActiveLink} = useContext(ActiveContext);
+
 
 
   const onUpdateActiveLink = (value)=>{
     setActiveLink(value);
   }
+
+    const logoutButton = () => {
+      userLogged=false;
+      onUpdateActiveLink('home');
+      console.log(userLogged);
+      
+  
+    }
+
+
 
   return (
     <Navbar expand="lg" sticky="top" id='navbarConfig'>
@@ -43,7 +55,7 @@ const NavbarComponent = () => {
             {!userLogged===true ? (<Nav.Link as={Link} className={activeLink==='login'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('login')} to="/login">Iniciar sesion</Nav.Link>):null}
             {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='newPost'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('newPost')} to="/nueva-venta">Nueva venta</Nav.Link>):null}
             {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='products'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('products')} to="/mis-productos">Mis productos</Nav.Link>):null}
-            {userLogged===true ? (<Nav.Link as={Link} className='backHover' onClick={()=> onUpdateActiveLink('home')} to="/">Cerrar sesion</Nav.Link>):null}
+            {userLogged===true ? (<Nav.Link as={Link} className='backHover' onClick={logoutButton} to="/">Cerrar sesion</Nav.Link>):null}
             {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='cart'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('cart')} to="/cart"><CartFill size={23}/></Nav.Link>):null}
             
           </Nav>

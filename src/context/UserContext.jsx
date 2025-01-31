@@ -5,6 +5,7 @@ const UserContext=createContext()
 const UserProvider = ({children}) => {
 
   const [user,setUser] = useState([])
+  const [userLogged,setUserLogged] = useState(false)
 
     const registerUser = async (datos)  => {
       let newUser={...datos,logged:false}
@@ -25,11 +26,8 @@ const UserProvider = ({children}) => {
     
     if (datos.password===search.password){
       alert("Autentificacion correcta")
-      setUser(true)
+      setUserLogged(true)
 
-
-    } else if (password.length<8) {
-      alert("Contrasena tiene que tener 8 caracteres minimo")
     } else{
       alert("Contrasena no coincide")
     }
@@ -37,7 +35,7 @@ const UserProvider = ({children}) => {
   }
 
 
-  return <UserContext.Provider value={{user,setUser,registerUser,logInUser}}>
+  return <UserContext.Provider value={{user,setUser,registerUser,logInUser,userLogged}}>
   {children}
   </UserContext.Provider>
 
