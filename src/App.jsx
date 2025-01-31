@@ -41,15 +41,6 @@ function App() {
         <Route path="/cart" element={<Cart />} />
       
     </Routes>
-      <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/perfil" element={<Profile />} /> 
-          <Route path="/perfil/nueva-venta" element={<NuevaVenta />} />
-          <Route path="/perfil/mis-productos" element={<MisProductos />} />
-          <Route path="/cart" element={<Cart />} />
-      </Routes>
 
     
     <Footer />
