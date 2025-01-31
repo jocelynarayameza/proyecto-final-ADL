@@ -1,17 +1,23 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
+const ProductCard = ({ nombre, precio, foto, id }) => {
 
-const ProductCard = ({ nombre, precio, foto }) => {
+  const navigate = useNavigate();
+  const details = (idProduct) => {
+    navigate(`/producto/${idProduct}`);
+  }
   return (
     <Card style={{ width: "16rem" }} className="m-5 p-3 border border-danger-subtle">
-      <Card.Img variant="top" src={foto} className="card img-fluid"/>
+      <Card.Img variant="top" src= {foto} className="img img-fluid"/>
       <Card.Body>
-        <Card.Title>{nombre}</Card.Title>
+        <Card.Title className="title-acme">{nombre}</Card.Title>
         <Card.Text>
           ${precio}
         </Card.Text>
-        <Button variant="primary">Agregar al carrito</Button>
+        <Button variant="warning" className="m-1" onClick={() => details(id)}>Ver detalles</Button>
+        <Button variant="success" >Agregar al carrito</Button>
       </Card.Body>
     </Card>
   );

@@ -16,6 +16,7 @@ import NavbarComponent from './components/NavbarComponent.jsx'
 import Footer from './components/Footer.jsx'
 import Header from './components/Header.jsx'
 import { Routes, Route } from "react-router-dom";
+import CardDetail from './pages/CardDetail.jsx';
 
 import { ActiveProvider } from "./context/ActiveContext.jsx";
 
@@ -30,6 +31,7 @@ function App() {
     <Header />
     <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/producto/:id" element={<CardDetail />} /> 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/perfil" element={<Profile />} /> 

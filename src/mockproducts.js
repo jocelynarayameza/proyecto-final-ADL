@@ -1,5 +1,5 @@
 const productos = [{
-    id: '1',
+    id: 1,
     nombre: 'Polera FF VI',
     precio: '20000',
     foto: ' https://cdnx.jumpseller.com/disenos-de-la-rata-otaku/image/36562686/thumb/1438/1438?1698820206',
@@ -10,7 +10,7 @@ const productos = [{
 },
 
 {
-    id: '2',
+    id: 2,
     nombre: 'Taza Tifa FFVII',
     precio: '40000',
     foto: 'https://http2.mlstatic.com/D_NQ_NP_2X_931230-MLC81449895006_122024-T.webp',
@@ -19,7 +19,7 @@ const productos = [{
     cantidad: '15',
     vendedor: 'Tifa lover'
 },
-{ id: '3', 
+{ id:3, 
     nombre: 'Juego Final Fantasy IX', 
     precio: '35000', 
     foto: 'https://upload.wikimedia.org/wikipedia/en/5/51/Ffixbox.jpg', 
@@ -28,7 +28,7 @@ const productos = [{
     cantidad: '3',
     vendedor: 'Retro gamer'},
     
-    { id: '4', 
+    { id:4, 
     nombre: 'Pin Haurchefant', 
     precio: '14990', 
     foto: 'https://i.etsystatic.com/18833319/r/il/33060a/6237173934/il_794xN.6237173934_n489.jpg', 
@@ -37,7 +37,7 @@ const productos = [{
     cantidad: '5',
     vendedor: 'LeorenArts'},
     
-    { id: '5', 
+    { id: 5, 
     nombre: 'Vinilo de FFXIV HEAVENSWARD Vol.2', 
     precio: '30000', 
     foto: 'https://cdn11.bigcommerce.com/s-6rs11v9w2d/images/stencil/1280x1280/products/3128/16330/HEAVENSWARD_Vinyl_LP_Vol._2__72443.1698700221.jpg?c=1', 
@@ -46,7 +46,7 @@ const productos = [{
     cantidad: '10',
     vendedor: 'SQUARE ENIX store'},
     
-    { id: '6', 
+    { id:6, 
     nombre: 'Peluche de Moogle/Moguri', 
     precio: '12990', 
     foto: 'https://resize.cdn.otakumode.com/ex/1000.1000/u/ff3f251dcc66416fae21af4d3b30d6b1.jpg', 
@@ -55,7 +55,7 @@ const productos = [{
     cantidad: '6',
     vendedor: 'Tokyo Otaku Mode'},
     
-    { id: '7', 
+    { id: 7, 
     nombre: 'Set pixel art FFIX vol.1', 
     precio: '40000', 
     foto: 'https://i.pinimg.com/736x/7d/68/5a/7d685a1a8a7cc35b45b386ad2239cbd8.jpg', 

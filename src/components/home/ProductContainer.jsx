@@ -1,9 +1,12 @@
 import React from "react";
 import Filters from "./Filters";
 import ProductCard from "./ProductCard";
+import PaginationComponent from "./Pagination";
 import { Container, Row, Col, Form } from "react-bootstrap";
 
 const ProductContainer = ({ productos }) => {
+
+
   return (
     <>
       <Container fluid>
@@ -28,7 +31,11 @@ const ProductContainer = ({ productos }) => {
                 <ProductCard key={prod.id} {...prod} />
               ))}
             </Col>
+            <Col className="d-flex justify-content-center m-4">
+            <PaginationComponent productos={productos} />
+            </Col>
           </Col>
+          
         </Row>
       </Container>
     </>

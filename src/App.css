@@ -4,6 +4,11 @@
   src: url('../src/assets/fonts/MedievalSharp-Regular.ttf');
 }
 
+@font-face{
+    font-family: Acme;
+    src: url('../src/assets/fonts/Acme-Regular.ttf');
+  }
+
 
 /* Colores de fondo y textos */
 .skyBlue {
@@ -98,4 +103,12 @@
 
 .footer-text{
   text-align: center;
+}
+
+.title-acme {
+    font-family: "Acme";
+}
+
+.img {
+  height: 12rem;
 }
