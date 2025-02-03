@@ -11,8 +11,9 @@ import { UserContext } from '../context/UserContext';
 
 
 const NavbarComponent = () => {
-  let {userLogged} = useContext(UserContext)
-  console.log(userLogged);
+  // let {userLogged} = useContext(UserContext)
+  // console.log(userLogged);
+  const userLogged=true
   
   let {activeLink,setActiveLink} = useContext(ActiveContext);
 
