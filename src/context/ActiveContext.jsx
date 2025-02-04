@@ -4,7 +4,7 @@ const ActiveContext = createContext()
 
 const ActiveProvider = ({children}) => {
   const [activeLink,setActiveLink] = useState('home')
-  const [profileActive,setProfileActive] = useState('about-me')
+  const [profileActive,setProfileActive] = useState('')
 
   return <ActiveContext.Provider value = {{activeLink,setActiveLink, profileActive,setProfileActive}}>
     {children}

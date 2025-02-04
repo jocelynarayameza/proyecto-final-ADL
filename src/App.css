@@ -219,3 +219,32 @@ hr{
 .profileLink{
   background-color: #f8d589;
 }
+
+.adressColor{
+  border: #ED9C9C solid 2px;
+  width: 40rem;
+}
+
+
+/* CSS Nuevo producto */
+.newPostColor{
+  border: #ED9C9C solid 2px;
+  width: 20rem;
+}
+
+.textareaColor{
+  border: #ED9C9C solid 2px;
+  width: 30rem;
+  height: 8rem !important;
+}
+
+/* CSS NotFound */
+
+.moogleImg{
+  width: 30rem;
+  height: 30rem;
+}
+
+#notFound .titleNF{
+  font-family: 'MedievalSharp',sans-serif;
+}

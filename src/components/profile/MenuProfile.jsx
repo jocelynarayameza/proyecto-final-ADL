@@ -1,42 +1,53 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
-import { Person, Shop, BagPlus} from 'react-bootstrap-icons';
-import { Col, Nav, Row } from 'react-bootstrap';
+import { Person, Shop, BagPlus, CartCheck} from 'react-bootstrap-icons';
+import { Col, Nav, Row, Tab, Tabs } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { ActiveContext } from '../../context/ActiveContext';
 
 const MenuProfile = () => {
   let {profileActive,setProfileActive} = useContext(ActiveContext)
 
-  const onUpdateProfileActive = (value)=>{
+  let UpdateProfileActive = (value)=>{
     setProfileActive(value);
   }
+
+
+  console.log(profileActive);
+  
 
   return (
     <div id='menuProfile' className='yellowColor py-0'>
       <Container>
         <Row>
-          <Col xs={12} sm={3}>
+          <Col xs={12} sm={2}>
             <h2 className='pt-4 textProfileTitle'>Mi perfil</h2>
           </Col>
-          <Col xs={12} sm={9}>
-            <Nav justify variant="tabs">
+          <Col xs={12} sm={10}>
+          
+            <Nav justify >
               <Nav.Item>
-                <Nav.Link as={Link} to="/perfil" className={profileActive==='about-me'? 'textProfile profileLink':'textProfile'} onClick={()=> onUpdateProfileActive('about-me')}>
+                <Nav.Link as={Link} to="/perfil" className={profileActive==='about-me'? 'textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('about-me')} onLoad={()=> UpdateProfileActive('about-me')}>
                   <Person size={30}/>
                   <p>Mis datos</p>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/perfil/nueva-venta" className='textProfile' onClick={()=> onUpdateProfileActive('new-post')}>
+                <Nav.Link as={Link} to="/perfil/nueva-venta" onClick={()=> UpdateProfileActive('new-post')} className={profileActive==='new-post'? 'textProfile profileLink':'textProfile'} >
                   <BagPlus size={30}/>
                   <p>Nueva venta</p>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/perfil/mis-productos"  className='textProfile' onClick={()=> onUpdateProfileActive('my-posts')}>
+                <Nav.Link as={Link} to="/perfil/mis-productos" className={profileActive==='my-posts'? 'textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('my-posts')}>
                   <Shop size={30}/>
                   <p>Mis productos</p>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link as={Link} to="/perfil/pedidos-anteriores" className={profileActive==='my-orders'? 'textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('my-orders')}>
+                  <CartCheck size={30}/>
+                  <p>Pedidos anteriores</p>
                 </Nav.Link>
               </Nav.Item>
             </Nav>

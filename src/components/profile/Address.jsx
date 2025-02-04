@@ -21,14 +21,14 @@ const Address = () => {
         </Row>
         <Form onSubmit={handleSubmit} >
           <Row>
-            <Col>
+            <Col xs={12} sm={8}>
               <Form.Group className="mb-3"  controlId="formBasicAdress">
                <Form.Label>Direccion actual</Form.Label>
-               <Form.Control className='registerLoginColor' type="text" placeholder="Calle 8, Lindblum, Gaia" {...adress} />
+               <Form.Control className='adressColor' type="text" placeholder="Calle 8, Lindblum, Gaia" {...adress} />
               </Form.Group>
             </Col>
-            <Col>
-              <Button className='registerLoginButton registerLoginInput' variant="info" type="submit">
+            <Col xs={12} sm={4}>
+              <Button className='registerLoginButton registerLoginInput mt-3' variant="info" type="submit">
                 <p className='registerLoginButtonText'>Editar</p>
               </Button>
             </Col>
