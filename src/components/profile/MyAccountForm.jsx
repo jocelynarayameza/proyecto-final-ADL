@@ -74,7 +74,7 @@ const MyAccountForm = () => {
 
               <Form.Group className="mb-3" controlId="formBasicUsername">
                 <Form.Label>Nombre de usuario</Form.Label>
-                <Form.Control disabled className='registerLoginColor' type="text" placeholder=""/>
+                <Form.Control disabled className='registerLoginColor' type="text" placeholder="Vivi_tienda"/>
               </Form.Group>
 
               <FormGroup className="mb-3" controlId="formBasicBirthday">

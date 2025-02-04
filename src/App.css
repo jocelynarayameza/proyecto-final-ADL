@@ -201,10 +201,21 @@ hr{
   font-size: 1.3rem;
   font-weight: 600;
   text-align: center;
+  color: #323232;
 }
+
+.textProfile:hover{
+  background-color:#f8d589;
+  color: #323232;
+}
+
 
 #titleProfile{
   font-size: 2rem;
   text-decoration: underline;
   font-weight: 600;
+}
+
+.profileLink{
+  background-color: #f8d589;
 }

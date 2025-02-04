@@ -6,7 +6,7 @@ import useInput from '../../assets/hooks/useInput';
 import { UserContext } from '../../context/UserContext';
 
 const Address = () => {
-
+  const adress=useInput("")
   const handleSubmit = (e)=>{
     e.preventdefault()
   }
@@ -21,6 +21,18 @@ const Address = () => {
         </Row>
         <Form onSubmit={handleSubmit} >
           <Row>
+            <Col>
+              <Form.Group className="mb-3"  controlId="formBasicAdress">
+               <Form.Label>Direccion actual</Form.Label>
+               <Form.Control className='registerLoginColor' type="text" placeholder="Calle 8, Lindblum, Gaia" {...adress} />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Button className='registerLoginButton registerLoginInput' variant="info" type="submit">
+                <p className='registerLoginButtonText'>Editar</p>
+              </Button>
+            </Col>
+
           </Row>
         </Form>
       </Container>

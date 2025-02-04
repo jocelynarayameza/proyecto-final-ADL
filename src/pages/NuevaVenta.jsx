@@ -1,8 +1,11 @@
 import React from 'react'
+import MenuProfile from '../components/profile/MenuProfile'
 
 const NuevaVenta = () => {
   return (
-    <div>NuevaVenta</div>
+    <div>
+      <MenuProfile/>  
+    </div>
   )
 }
 
