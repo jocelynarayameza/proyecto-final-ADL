@@ -8,11 +8,7 @@ const PostContainer = () => {
   const productos = useFetchProducts();
   return (
     <Container>
-      <Row>
-        <Col>
-          <MenuProfile />
-        </Col>
-      </Row>
+      
       <Row className="m-3 d-flex justify-content-center">
         <Col>
           <h2 className="title-acme">Mis productos</h2>

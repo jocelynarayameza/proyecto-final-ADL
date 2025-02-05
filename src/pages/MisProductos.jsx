@@ -6,8 +6,11 @@ import MenuProfile from '../components/profile/MenuProfile'
 
 const MisProductos = () => {
   return (
+    <>
     <MenuProfile/>
     <PostContainer/>
+    </>
+    
   )
 }
 

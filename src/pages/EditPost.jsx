@@ -20,8 +20,9 @@ const EditPost = () => {
 
  
   return (
+    <div>
+<MenuProfile />
     <div className="d-flex flex-column justify-content-center align-items-center">
-      <MenuProfile />
 
       <Container className="m-4">
         <Row className="m-3 d-flex justify-content-center">
@@ -108,6 +109,9 @@ const EditPost = () => {
         </Form>
       </Container>
     </div>
+
+    </div>
+    
   );
 };
 
