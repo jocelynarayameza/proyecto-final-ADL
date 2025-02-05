@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { Button } from 'react-bootstrap'
 import { Dash } from 'react-bootstrap-icons'
 
-const Minus = ({itemCart}) => {
+const MinusMod = ({itemCart}) => {
   // const {cart,setCart} = useContext(CartContext)
 
   // function Modquantity(id){
@@ -29,4 +29,4 @@ const Minus = ({itemCart}) => {
   )
 }
 
-export default Minus
+export default MinusMod
