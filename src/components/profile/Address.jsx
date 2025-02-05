@@ -7,6 +7,7 @@ import { UserContext } from '../../context/UserContext';
 
 const Address = () => {
   const adress=useInput("")
+
   const handleSubmit = (e)=>{
     e.preventdefault()
   }
@@ -28,7 +29,7 @@ const Address = () => {
               </Form.Group>
             </Col>
             <Col xs={12} sm={4}>
-              <Button className='registerLoginButton registerLoginInput mt-3' variant="info" type="submit">
+              <Button className='registerLoginButton registerLoginInput mt-4' variant="info" type="submit">
                 <p className='registerLoginButtonText'>Editar</p>
               </Button>
             </Col>

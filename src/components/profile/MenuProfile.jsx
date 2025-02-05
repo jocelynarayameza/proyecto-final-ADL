@@ -4,6 +4,7 @@ import { Person, Shop, BagPlus, CartCheck} from 'react-bootstrap-icons';
 import { Col, Nav, Row, Tab, Tabs } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { ActiveContext } from '../../context/ActiveContext';
+import chocoboIcon from "../../assets/img/chocoboIcon.png"
 
 const MenuProfile = () => {
   let {profileActive,setProfileActive} = useContext(ActiveContext)
@@ -11,20 +12,24 @@ const MenuProfile = () => {
   let UpdateProfileActive = (value)=>{
     setProfileActive(value);
   }
-
-
-  console.log(profileActive);
   
 
   return (
     <div id='menuProfile' className='yellowColor py-0'>
       <Container>
         <Row>
-          <Col xs={12} sm={2}>
-            <h2 className='pt-4 textProfileTitle'>Mi perfil</h2>
+          <Col xs={12} sm={3} className=''>
+            <Row>
+              <Col xs={6}>
+                <h2 className='pt-4 textProfileTitle'>Mi perfil</h2>
+              </Col>
+              <Col xs={6}>
+                <img className="mt-3 mb-0 chocoboImg" src={chocoboIcon} alt="chocobo profile icon"/>
+              </Col>
+             </Row>
+
           </Col>
-          <Col xs={12} sm={10}>
-          
+          <Col xs={12} sm={9}>
             <Nav justify >
               <Nav.Item>
                 <Nav.Link as={Link} to="/perfil" className={profileActive==='about-me'? 'textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('about-me')} onLoad={()=> UpdateProfileActive('about-me')}>

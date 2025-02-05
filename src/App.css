@@ -23,7 +23,7 @@ a{
 }
 
 hr{
-  border-top: 0.7rem solid #eb3333;
+  border-top: 0.7rem solid #fac30f !important;
 }
 
 
@@ -118,7 +118,7 @@ hr{
 /* CSS del Footer */
 
 .titleConfig{
-  font-size: 2rem;
+  font-size: 1.53rem;
   font-family: 'MedievalSharp', sans-serif !important;
   margin-top: 4rem;
 
@@ -170,12 +170,6 @@ hr{
   color:#323232;
 }
 
-.loginForm .flexbox{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 /* CSS cards home */
 .title-acme {
@@ -192,13 +186,13 @@ hr{
 
 .textProfileTitle {
   font-family: 'Acme', sans-serif;
-  text-align: center;
-  font-size: 2.3rem;
+  text-align: end;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
 .textProfile{
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
   color: #323232;
@@ -222,20 +216,24 @@ hr{
 
 .adressColor{
   border: #ED9C9C solid 2px;
-  width: 40rem;
+  width: 100%;
 }
 
+.chocoboImg{
+  width: 3rem;
+  height: 3rem;
+}
 
 /* CSS Nuevo producto */
 .newPostColor{
   border: #ED9C9C solid 2px;
-  width: 20rem;
+  width: 100%;
 }
 
 .textareaColor{
   border: #ED9C9C solid 2px;
-  width: 30rem;
-  height: 8rem !important;
+  width: 100%;
+  height: 100% !important;
 }
 
 /* CSS NotFound */

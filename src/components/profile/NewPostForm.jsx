@@ -43,49 +43,59 @@ const NewPostForm = () => {
       </Container>
 
 
-      <Container fluid className='d-flex flex-column align-items-center mt-1 mb-4'>
+      <Container className='align-items-center mt-1 mb-4'>
         <p>Buscar producto existente</p>
-        <Form inline onSubmit={handleSubmit}>
+        <Form inline onSubmit={handleSubmit} className=''>
           <Row>
-            <Col xs="auto">
+            <Col xs={10} sm={9}>
               <Form.Control type="text" placeholder="Figura Zidane FFXIV" className=" mr-sm-2 newPostColor" {...search}/>
             </Col>
-            <Col xs="auto">
+            <Col xs={2} sm={3}>
               <Button variant="info" type="submit" className='skyBlue'><Search size={20}/></Button>
             </Col>
           </Row>
         </Form>
       </Container>
 
-      <hr/>
+      <Container>
+       <hr/>
+      </Container>
 
-      <Container className='my-4 d-flex justify-content-center'>
+
+      <Container className='my-4 '>
         <Form>
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formProductName" className='mb-3'>
-              <Form.Label>Nombre del producto</Form.Label>
-              <Form.Control className='newPostColor' type="name" placeholder="Figura Garnet FFXIV" {...product_name}/>
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formGridPassword" className='mb-3'>
-              <Form.Label>{"Precio ($ CLP)"}</Form.Label>
-              <Form.Control className='newPostColor' type="price" placeholder="20000" {...product_price} />
-            </Form.Group>
-
-            <Form.Group as={Col} className="mb-3" controlId="formGridAddress1">
-              <Form.Label>Cantidad</Form.Label>
-              <Form.Control className='newPostColor' placeholder="3" {...product_quantity} />
-            </Form.Group>
-          </Row>
-
-          <Row>
-            <Col xs={12} sm={4}>
-              <Form.Group className="mb-3" controlId="formGridAddress2">
+            <Col xs={12} sm={5}>
+              <Form.Group controlId="formProductName" className='mb-3'>
+                <Form.Label>Nombre del producto</Form.Label>
+                <Form.Control className='newPostColor' type="name" placeholder="Figura Garnet FFXIV" {...product_name}/>
+              </Form.Group>
+            </Col>
+            <Col xs={12} sm={5}>
+            <Form.Group className="mb-3" controlId="formGridAddress2">
                 <Form.Label>{"Foto (URL)"}</Form.Label>
                 <Form.Control className='newPostColor' placeholder="http://www.foto.com/foto" {...product_photo} />
               </Form.Group>
 
-              <Form.Group as={Col} controlId="formCategory" className='mb-3'>
+  
+            </Col>
+            <Col xs={12} sm={2}>
+              <Form.Group as={Col} controlId="formGridPassword" className='mb-3'>
+                <Form.Label>{"Precio ($ CLP)"}</Form.Label>
+                <Form.Control className='newPostColor' type="price" placeholder="20000" {...product_price} />
+              </Form.Group>
+    
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={12} sm={4} className='d-flex flex-column'>
+              <Form.Group as={Col} className="mb-3" controlId="formGridAddress1">
+                <Form.Label>Cantidad</Form.Label>
+                <Form.Control className='newPostColor' placeholder="3" {...product_quantity} />
+              </Form.Group>
+
+              <Form.Group controlId="formCategory" className='mb-3'>
                 <Form.Label>Categoria</Form.Label>
                 <Form.Select className='newPostColor' {...category}>
                   <option>Seleciona solo 1 categoria de abajo</option>

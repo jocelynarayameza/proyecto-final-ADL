@@ -10,7 +10,7 @@ const Footer = () => {
           <Col className='mt-1' xs={12} md={4}>
             <Row>
               <Col xs={6} md={6}>
-               <img className="mt-3 mb-0" src={logo} width="200" height="200" alt="logo"/>
+               <img className="mt-3 mb-0" src={logo} width="200" height="200" alt="logo footer moogle"/>
               </Col>
               <Col xs={6} md={6}>
                 <p className='titleConfig'>Final Fantasy Marketplace</p>

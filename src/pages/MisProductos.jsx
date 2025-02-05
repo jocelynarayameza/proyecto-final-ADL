@@ -1,8 +1,11 @@
 import React from 'react'
+import MenuProfile from '../components/profile/MenuProfile'
 
 const MisProductos = () => {
   return (
-    <div>MisProductos</div>
+    <div>
+      <MenuProfile/>
+    </div>
   )
 }
 

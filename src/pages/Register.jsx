@@ -56,11 +56,11 @@ const Register = () => {
   }
 
   return (
-    <div className='registerForm flexbox'>
+    <div className='registerForm'>
       <h1 id='titleText'>Registrar nueva cuenta</h1>
-      <div className='yellowColor py-5 my-5 '>
-        <Container className='whiteColor py-5 '>
-          <Form onSubmit={handleSubmit} >
+      <div className=' py-2 my-3 '>
+        <Container className='yellowColor py-5 '>
+          <Form onSubmit={handleSubmit} className='whiteColor py-3' >
           <Row>
             <Col md={12} lg={6} className='px-5'>
               <Form.Group className="mb-3"  controlId="formName">
