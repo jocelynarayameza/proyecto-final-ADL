@@ -265,3 +265,30 @@ hr{
     border: #9BE8F5;
   }
 
+
+/* CSS My Products  */
+
+ .imgMyProducts {
+  height: 8rem;
+  width: 8rem;
+
+ }
+
+ .cardMyProducts {
+  min-height: 10rem;
+ }
+
+ /*Edit Post*/
+.editPostColor {
+  border: #ED9C9C solid 2px;
+  
+}
+
+.editButton {
+  width: 20rem;
+  background-color: #9BE8F5;
+  color: #323232;
+  border: #9BE8F5;
+}
+
+
