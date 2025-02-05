@@ -1,3 +1,4 @@
+
 import React, { useContext, useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import { Person, Shop, BagPlus, CartCheck} from 'react-bootstrap-icons';
@@ -64,3 +65,4 @@ const MenuProfile = () => {
 }
 
 export default MenuProfile
+

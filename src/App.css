@@ -181,6 +181,13 @@ hr{
 .img {
   height: 12rem;
 }
+<<<<<<<<< Temporary merge branch 1
+.addCartButton {
+    background-color: #9BE8F5;
+    color: #323232;
+    border: #9BE8F5;
+  }
+=========
 
 
 
@@ -260,8 +267,4 @@ hr{
 #cartCard {
   border:#f8d589 solid 2px;
 }
-.addCartButton {
-    background-color: #9BE8F5;
-    color: #323232;
-    border: #9BE8F5;
-  }
+>>>>>>>>> Temporary merge branch 2
