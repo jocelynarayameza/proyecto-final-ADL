@@ -1,19 +1,9 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { obtenerProductos } from "../mockproducts";
 import ProductContainer from "../components/home/ProductContainer";
+import useFetchProducts from "../assets/hooks/useFetchProducts";
 
 const Home = () => {
-  const [productos, setProductos] = useState([]);
-
-  useEffect(() => {
-    const fetchProductos = async () => {
-      const data = await obtenerProductos();
-      setProductos(data);
-    };
-    fetchProductos();
-  }, []);
-
+  const productos = useFetchProducts();
   return (
     <>
       <ProductContainer productos= {productos} />

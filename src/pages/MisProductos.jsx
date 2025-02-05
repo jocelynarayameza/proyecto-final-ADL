@@ -1,8 +1,9 @@
 import React from 'react'
+import PostContainer from '../components/profile/PostContainer'
 
 const MisProductos = () => {
   return (
-    <div>MisProductos</div>
+    <PostContainer/>
   )
 }
 

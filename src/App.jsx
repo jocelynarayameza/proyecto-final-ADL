@@ -20,6 +20,7 @@ import CardDetail from './pages/CardDetail.jsx';
 
 import { ActiveProvider } from "./context/ActiveContext.jsx";
 import { UserProvider } from './context/UserContext.jsx'
+import EditPost from './pages/EditPost.jsx';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="/perfil" element={<Profile />} /> 
         <Route path="/perfil/nueva-venta" element={<NuevaVenta />} />
         <Route path="/perfil/mis-productos" element={<MisProductos />} />
+        <Route path="/perfil/mis-productos/:id" element={<EditPost/>} /> 
         <Route path="/cart" element={<Cart />} />
       
     </Routes>
