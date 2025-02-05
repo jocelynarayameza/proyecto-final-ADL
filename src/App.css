@@ -19,12 +19,12 @@
 
 a{
   text-decoration: none;
+  color: #323232;
 }
 
-@font-face{
-    font-family: Acme;
-    src: url('../src/assets/fonts/Acme-Regular.ttf');
-  }
+hr{
+  border-top: 0.7rem solid #fac30f !important;
+}
 
 
 /* Colores de fondo y textos */
@@ -118,7 +118,7 @@ a{
 /* CSS del Footer */
 
 .titleConfig{
-  font-size: 2rem;
+  font-size: 1.53rem;
   font-family: 'MedievalSharp', sans-serif !important;
   margin-top: 4rem;
 
@@ -170,21 +170,95 @@ a{
   color:#323232;
 }
 
-.loginForm .flexbox{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
+/* CSS cards home */
 .title-acme {
-    font-family: "Acme";
+    font-family: "Acme", sans-serif;
 }
 
 /* CSS Products */
 
 .img {
   height: 12rem;
+}
+
+
+
+/* CSS del menu profile */
+
+.textProfileTitle {
+  font-family: 'Acme', sans-serif;
+  text-align: end;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.textProfile{
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #323232;
+}
+
+.textProfile:hover{
+  background-color:#f8d589;
+  color: #323232;
+}
+
+
+#titleProfile{
+  font-size: 2rem;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.profileLink{
+  background-color: #f8d589;
+}
+
+.adressColor{
+  border: #ED9C9C solid 2px;
+  width: 100%;
+}
+
+.chocoboImg{
+  width: 3rem;
+  height: 3rem;
+}
+
+/* CSS Nuevo producto */
+.newPostColor{
+  border: #ED9C9C solid 2px;
+  width: 100%;
+}
+
+.textareaColor{
+  border: #ED9C9C solid 2px;
+  width: 100%;
+  height: 100% !important;
+}
+
+/* CSS NotFound */
+
+.moogleImg{
+  width: 30rem;
+  height: 30rem;
+}
+
+#notFound .titleNF{
+  font-family: 'MedievalSharp',sans-serif;
+}
+
+
+/* CSS del carrito */
+
+.inputCart{
+  text-align: center;
+  width: 2rem;
+}
+
+#cartCard {
+  border:#f8d589 solid 2px;
 }
 .addCartButton {
     background-color: #9BE8F5;

@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuProfile from '../components/profile/MenuProfile'
 
-const MisProductos = () => {
+const MyOrders = () => {
   return (
     <div>
       <MenuProfile/>
@@ -9,4 +9,4 @@ const MisProductos = () => {
   )
 }
 
-export default MisProductos
+export default MyOrders
