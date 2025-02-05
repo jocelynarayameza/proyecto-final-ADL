@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import useInput from '../assets/hooks/useInput';
 import { UserContext } from '../context/UserContext';
 
+
 const Register = () => {
   const name=useInput("");
   const lastname=useInput("");
@@ -43,7 +44,9 @@ const Register = () => {
     if(passConfirmed==true && emailConfirmed==true){
       registerUser(
         { email: email.value,
+          email_confirm: email_confirm.value,
           password: password.value,
+          password_confirm: password_confirm.value,
           username:username.value,
           name: name.value,
           lastname: lastname.value,

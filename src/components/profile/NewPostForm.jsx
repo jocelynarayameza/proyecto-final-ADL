@@ -14,9 +14,6 @@ const NewPostForm = () => {
   const product_description=useInput("");
   const category=useInput("");
   const search=useInput("")
-
-  
-  console.log(search);
   
 
   const {registerUser}=useContext(UserContext)

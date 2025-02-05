@@ -246,3 +246,15 @@ hr{
 #notFound .titleNF{
   font-family: 'MedievalSharp',sans-serif;
 }
+
+
+/* CSS del carrito */
+
+.inputCart{
+  text-align: center;
+  width: 2rem;
+}
+
+#cartCard {
+  border:#f8d589 solid 2px;
+}

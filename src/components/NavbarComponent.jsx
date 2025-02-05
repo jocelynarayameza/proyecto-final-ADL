@@ -11,27 +11,19 @@ import { UserContext } from '../context/UserContext';
 
 
 const NavbarComponent = () => {
-  // let {userLogged} = useContext(UserContext)
-  // console.log(userLogged);
-  const userLogged=true
+  let {user,setUser} = useContext(UserContext)
+  const userLogged=user.logged
   
   let {activeLink,setActiveLink,setProfileActive} = useContext(ActiveContext);
-
-
 
   const onUpdateActiveLink = (value)=>{
     setActiveLink(value);
   }
 
     const logoutButton = () => {
-      // userLogged=false;
-      // onUpdateActiveLink('home');
-      // console.log(userLogged);
-      
-  
+      setUser([])
+      onUpdateActiveLink('home'); 
     }
-
-
 
   return (
     <Navbar expand="lg" sticky="top" id='navbarConfig'>
