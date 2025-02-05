@@ -176,11 +176,11 @@ hr{
     font-family: "Acme", sans-serif;
 }
 
+/* CSS Products */
+
 .img {
   height: 12rem;
 }
-
-
 
 /* CSS del menu profile */
 
@@ -258,3 +258,10 @@ hr{
 #cartCard {
   border:#f8d589 solid 2px;
 }
+
+.addCartButton {
+    background-color: #9BE8F5;
+    color: #323232;
+    border: #9BE8F5;
+  }
+

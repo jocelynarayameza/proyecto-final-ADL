@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
+import { Form, Container, Row, Col } from "react-bootstrap";
 
 const Filters = () => {
   const filtros = [
@@ -14,28 +14,35 @@ const Filters = () => {
     "Ropa",
   ];
   return (
-    <>
-      <h4 className="text-center">Filtros</h4>
-      <div className=" bg-warning-subtle p-3 m-3">
-        <h4>Categoría</h4>
-        <Form>
-          {filtros.map((filtro, index) => (
-            <Form.Check
-              className="pb-3"
-              key={index}
-              type="checkbox"
-              id={index}
-              label={filtro}
-            />
-          ))}
-        </Form>
-        <hr />o
-        <Form.Group>
-          <Form.Label>$0-100 </Form.Label>
-          <Form.Range min="0" max="1000" step="10" />
-        </Form.Group>
-      </div>
-    </>
+
+      <Container>
+        <Row>
+          <Col>
+            <h4 className="text-center">Filtros</h4>
+          </Col>
+        </Row>
+        <Row>
+          <Col  className=" bg-warning-subtle d-flex flex-column" >
+            <h4 className="text-center p-3">Categoría</h4>
+            <Form>
+              {filtros.map((filtro, index) => (
+                <Form.Check
+                  className="pb-3"
+                  key={index}
+                  type="checkbox"
+                  id={index}
+                  label={filtro}
+                />
+              ))}
+            </Form>
+            <hr />
+            <Form.Group>
+              <Form.Label>$0-100 </Form.Label>
+              <Form.Range min="0" max="1000" step="10" />
+            </Form.Group>
+          </Col>
+        </Row>
+      </Container>
   );
 };
 
