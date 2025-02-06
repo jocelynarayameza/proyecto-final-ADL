@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
-const ProductCard = ({ nombre, precio, foto, id }) => {
+import { UserContext } from "../../context/UserContext";
 
+const ProductCard = ({ nombre, precio, foto, id }) => {
+  const {user} = useContext(UserContext)
   const navigate = useNavigate();
   const details = (idProduct) => {
     navigate(`/producto/${idProduct}`);
@@ -17,7 +19,7 @@ const ProductCard = ({ nombre, precio, foto, id }) => {
           ${precio}
         </Card.Text>
         <Button variant="info" className="mb-2 goDetails px-4" onClick={() => details(id)}>Ver detalles</Button>
-        <Button variant="warning" className="addCartButton" >Agregar al carrito</Button>
+        <Button disabled={user.logged ? "":"false"} variant="warning" className="addCartButton" >Agregar al carrito</Button>
       </Card.Body>
     </Card>
   );

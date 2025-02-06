@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { obtenerProductos } from "../mockproducts.js";
 import { Image, Button, Col, Row, Container } from "react-bootstrap";
+import { UserContext } from "../context/UserContext.jsx";
 const CardDetail = () => {
+  const {user} = useContext(UserContext)
+
   const { id } = useParams();
   const [producto, setProducto] = useState({});
   const [contador, setContador] = useState(0);
@@ -53,7 +56,7 @@ const CardDetail = () => {
                       +
                     </Button>
                   </div>
-                  <Button className="addCartButton mt-3 px-4" variant="btn btn-warning">
+                  <Button disabled={user.logged ? "":"false"} className="addCartButton mt-3 px-4" variant="warning">
                     Agregar al carrito
                   </Button>
                 </div>

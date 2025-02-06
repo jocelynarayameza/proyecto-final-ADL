@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {createContext,useEffect,useState} from 'react'
+import { ProductsCart} from '../mockCart'
 
 const CartContext= createContext()
 
@@ -8,17 +9,19 @@ const CartProvider = ({children}) => {
   const [totalCart,setTotalCart]=useState([])
 
   let total= cart.reduce((accumulator ,item) => {
-    return accumulator += (parseInt(item.price)*parseInt(item.cantidad));
+    return accumulator += (parseInt(item.product_price)*parseInt(item.cantidad));
  }, 0)
  
  const totalCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(total)
 
   const getData = async () =>{
-    const response= axios.get("http://localhost:3001/carrito")
-    console.log(response.data);
+    const data= await ProductsCart()
+    // const response= await axios.get("http://localhost:3001/carrito")
+    // console.log(response.data);
     
-    let newData=response.data.map(item =>({...item, cantidad:0, add:false}))
+    let newData=data.map(item =>({...item, total_quantity:1, add:true}))
     setCart (newData)
+    console.log(cart);
     
   }
 
