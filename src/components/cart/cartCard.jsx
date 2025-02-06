@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Card, Col, Container, Row, Form } from 'react-bootstrap'
-import Minus from '../modifiers/Minus';
-import Plus from '../modifiers/Plus'
+import Minus from '../modifiers/MinusMod';
+import Plus from '../modifiers/PlusMod'
 import { Trash3 } from 'react-bootstrap-icons';
 
 
