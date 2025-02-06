@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { CheckLg } from 'react-bootstrap-icons'
+import { CartContext } from '../../context/CartContext'
 
 const cartOrders = () => {
+  const {totalCLP}=useContext(CartContext)
 
   const handleSubmit= async(e) =>{
     e.preventDefault()
@@ -34,7 +36,7 @@ const cartOrders = () => {
           </Col>
 
           <Col className='mt-2 d-flex justify-content-between cartOrderSub'>
-            <p className=''>Subtotal:</p><p>${68996} CLP</p>
+            <p className=''>Subtotal:</p><p>${totalCLP} CLP</p>
           </Col>
           <Col className='mt-0 d-flex justify-content-between cartOrderSub'>
             <p className=''>Descuentos</p><p>${0} CLP</p>

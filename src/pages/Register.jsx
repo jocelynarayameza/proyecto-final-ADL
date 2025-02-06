@@ -19,9 +19,6 @@ const Register = () => {
 
   const {registerUser}=useContext(UserContext)
 
-  
-  
-  
   const handleSubmit = (e)=> {
     e.preventDefault()
 

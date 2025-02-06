@@ -30,12 +30,11 @@ const UserProvider = ({children}) => {
   const logInUser = async (datos) => {
     const response= await axios.post("http://localhost:3001/login", {email: datos.email, password: datos.password})
     localStorage.setItem("token", response.data.token)
-    console.log(response.data.msg);
     
     if (response.data.msg=="Autentificacion correcta"){
       setUser( {email: response.data.email, logged: true, token: response.data.token})
       navigate('/')
-      console.log(user);
+
       
       alert("Autentificacion correcta")
     } else if (response.data.msg="Contrasena incorrecta") {

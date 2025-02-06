@@ -8,11 +8,13 @@ import { Link } from 'react-router-dom';
 
 import logo from '../assets/img/Vivi.png'
 import { UserContext } from '../context/UserContext';
+import { CartContext } from '../context/CartContext';
 
 
 const NavbarComponent = () => {
   let {user,setUser} = useContext(UserContext)
   const userLogged=user.logged
+  const {totalCLP}=useContext(CartContext)
   
   let {activeLink,setActiveLink,setProfileActive} = useContext(ActiveContext);
 
@@ -49,7 +51,7 @@ const NavbarComponent = () => {
             {/* {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='newPost'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('newPost')} to="/perfil/nueva-venta">Nueva venta</Nav.Link>):null}
             {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='products'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('products')} to="/mis-productos">Mis productos</Nav.Link>):null} */}
             {userLogged===true ? (<Nav.Link as={Link} className='backHover' onClick={logoutButton} to="/">Cerrar sesion</Nav.Link>):null}
-            {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='cart'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('cart')} to="/cart"><CartFill size={23}/></Nav.Link>):null}
+            {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='cart'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('cart')} to="/carrito"><CartFill size={23}/> Total:</Nav.Link>):null}
             
           </Nav>
         </Navbar.Collapse>

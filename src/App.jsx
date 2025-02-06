@@ -38,7 +38,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/producto/:id" element={<CardDetail />} /> 
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/registro" element={<Register />} />
         <Route path="/perfil/" element={<Profile />} /> 
         <Route path="/perfil/nueva-venta" element={<NuevaVenta />} />
         <Route path="/perfil/mis-productos" element={<MisProductos />} />
@@ -47,7 +47,7 @@ function App() {
 
         <Route path="/perfil/pedidos-anteriores" element={<MyOrders />} />
 
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/carrito" element={<Cart />} />
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
 

@@ -6,10 +6,14 @@ import { CartContext } from '../context/CartContext'
 
 const Cart = () => {
   const {cart}=useContext(CartContext)
-  console.log(cart);
-  
-  const cartTrue= cart.filter(item=>(item.add===true))
 
+  console.log("9cartjsx" , cart);
+  
+  // console.log(cart);
+  
+  
+  // const cartTrue= cart.filter(item=>(item.add===true))
+  
 
   return (
     <div>
@@ -17,9 +21,11 @@ const Cart = () => {
        <Container>
         <Row>
           <Col xs={12} sm={12} md={12} lg={8} className='p-0'>
-          {cart && cartTrue.map(item=>(
-           <CartCard key={item.id_product} name={item.product_name} price={item.product_price} description={item.product_description} img={item.product_photo}  id={item.id} quantity={item.product_quantity} category={item.category} seller={item.id_seller} add={item.add} total_quantity={item.total_quantity}/>))}
-
+          {cart.map((item)=>(
+           <CartCard key={item.id_product} 
+           name={item.product_name} price={item.product_price} description={item.product_description} img={item.product_photo}  id={item.id_product} quantity={item.product_quantity} category={item.category} seller={item.id_seller} add={item.add} total_quantity={item.total_quantity}
+           />))}
+          
            <Button variant='danger' className='buttonErase ms-2 my-3'>Vaciar el carrito</Button>
           </Col>
           <Col xs={12} sm={12} md={12} lg={4} className='p-0'>

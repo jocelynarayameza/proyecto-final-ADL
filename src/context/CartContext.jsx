@@ -6,13 +6,12 @@ const CartContext= createContext()
 
 const CartProvider = ({children}) => {
   const [cart,setCart]=useState([])
-  const [totalCart,setTotalCart]=useState([])
 
-  let total= cart.reduce((accumulator ,item) => {
-    return accumulator += (parseInt(item.product_price)*parseInt(item.cantidad));
- }, 0)
+//   let total= cart.reduce((accumulator ,item) => {
+//     return accumulator += (parseInt(item.product_price)*parseInt(item.cantidad));
+//  }, 0)
  
- const totalCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(total)
+//  const totalCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(total)
 
   const getData = async () =>{
     const data= await ProductsCart()
@@ -20,8 +19,9 @@ const CartProvider = ({children}) => {
     // console.log(response.data);
     
     let newData=data.map(item =>({...item, total_quantity:1, add:true}))
+
     setCart (newData)
-    console.log(cart);
+    console.log("CartContexst25" , cart, newData);
     
   }
 
@@ -30,7 +30,7 @@ const CartProvider = ({children}) => {
   },[])
   
 
-  return <CartContext.Provider value={{cart,setCart,totalCart,setTotalCart,totalCLP}}>
+  return <CartContext.Provider value={{cart,setCart}}>
     {children}
   </CartContext.Provider>
 }

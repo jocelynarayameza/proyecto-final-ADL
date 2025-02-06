@@ -1,12 +1,14 @@
 import React from 'react'
 import { Button, Card, Col, Container, Row, Form } from 'react-bootstrap'
 import Minus from '../modifiers/MinusMod';
-import Plus from '../modifiers/PlusMod'
+import PlusMod from '../modifiers/PlusMod'
 import { Trash3 } from 'react-bootstrap-icons';
 import moogle from '../../assets/img/moogle.png'
 
 
 const cartCard = (product) => {
+  console.log("cartCard" +product.id);
+  
   const precioFormat= product.price
   const count=product.total_quantity
 
@@ -47,7 +49,7 @@ const cartCard = (product) => {
                 <Form.Control className='inputCart px-1' min={0} type="text" value={product.total_quantity} placeholder="0" onChange={handleSubmit}></Form.Control>
               </Col>
 
-              <Col className="m-0 py-1" ><Plus product={product}/></Col>
+              <Col className="m-0 py-1" ><PlusMod product={product}/></Col>
               
               <Col className='px-0 py-1 cartProductPrice pr-3'>{totalFormat}</Col>
 
