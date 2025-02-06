@@ -8,8 +8,8 @@ import moogle from '../../assets/img/moogle.png'
 
 const cartCard = () => {
   return (
-    <div id="cartCard" className='mb-3 mx-2'>
-      <Container className=''>
+    <div id="cartCard" className='mb-3 mx-2 rounded-3'>
+      <Container>
         <Row >
           <Col xs={12} sm={6} >
             <Row className="my-1 mx-0 py-2 d-flex justify-content-between align-items-center">

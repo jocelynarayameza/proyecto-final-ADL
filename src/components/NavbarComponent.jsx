@@ -42,7 +42,7 @@ const NavbarComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="justify-content-end"/>
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end" >
           <Nav className="justify-content-end textConfig">
-            <Nav.Link as={Link} className={activeLink==='home'? 'active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('home')} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} className={activeLink==='home'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('home')} to="/">Home</Nav.Link>
             {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='profile'? 'backHover active navbar-link':'backHover'} onClick={()=>[ onUpdateActiveLink('profile'),setProfileActive('about-me')]} to="/perfil">Mi Perfil</Nav.Link>):null}
             {!userLogged===true ? (<Nav.Link as={Link} className={activeLink==='register'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('register')} to="/register">Registro</Nav.Link>):null}
             {!userLogged===true ? (<Nav.Link as={Link} className={activeLink==='login'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('login')} to="/login">Iniciar sesion</Nav.Link>):null}

@@ -3,8 +3,21 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { CheckLg } from 'react-bootstrap-icons'
 
 const cartOrders = () => {
+
+  const handleSubmit= async(e) =>{
+    e.preventDefault()
+    try {
+        const response= await axios.post("http://localhost:5000/api/checkouts", {cartTrue})
+
+        alert("Carrito enviado con exito")
+    } catch (error) {
+    }
+
+
+  }
+
   return (
-    <div id='cartFinalOrder' className='p-3 mb-3'>
+    <div id='cartFinalOrder' className='p-3 mb-3 mx-2 rounded-3' >
       <Container>
           <p className='cartOrderTitle pt-2 mb-2'>Resumen de compra</p>
         <Row className='d-flex flex-column mb-3'>
@@ -37,7 +50,7 @@ const cartOrders = () => {
             <p className=''>Total:</p><p>${71.996} CLP</p>
           </Col>
 
-          <Button variant='info' className='buttonCheckout'>Comprar</Button>
+          <Button type='submit' variant='info' className='buttonCheckout'>Comprar</Button>
         </Row>
       </Container>
     </div>
