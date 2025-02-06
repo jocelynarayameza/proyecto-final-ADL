@@ -16,8 +16,8 @@ const ProductCard = ({ nombre, precio, foto, id }) => {
         <Card.Text>
           ${precio}
         </Card.Text>
-        <Button variant="warning" className="mb-2" onClick={() => details(id)}>Ver detalles</Button>
-        <Button className="addCartButton" >Agregar al carrito</Button>
+        <Button variant="info" className="mb-2 goDetails px-4" onClick={() => details(id)}>Ver detalles</Button>
+        <Button variant="warning" className="addCartButton" >Agregar al carrito</Button>
       </Card.Body>
     </Card>
   );

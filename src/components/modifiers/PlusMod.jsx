@@ -23,7 +23,7 @@ const PlusMod = ({itemCart}) => {
     <div>
       <Button className='p-1' variant='light'
       // onClick={() => Modquantity(itemCart.id)}
-      ><Plus size={10}/>
+      ><Plus size={15}/>
       </Button>
     </div>
   )

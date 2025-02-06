@@ -23,8 +23,9 @@ a{
 }
 
 hr{
-  border-top: 0.7rem solid #fac30f !important;
+  border-top: 0.3rem solid #249F3F;
 }
+
 
 
 /* Colores de fondo y textos */
@@ -50,6 +51,10 @@ hr{
 
 .whiteColor {
   background-color: rgb(255, 255, 255);
+}
+
+.greenColor{
+  background-color: #249F3F;
 }
 
 
@@ -176,6 +181,15 @@ hr{
     font-family: "Acme", sans-serif;
 }
 
+.textPrice{
+  color:#249F3F ;
+}
+
+.textShop{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 /* CSS Products */
 
 .img {
@@ -183,12 +197,18 @@ hr{
 }
 
 .addCartButton {
-    background-color: #9BE8F5;
+    background-color:#f8d589;
     color: #323232;
-    border: #9BE8F5;
+    border: #f8d589;
+    font-weight: 500;
   }
 
-
+.goDetails{
+  background-color:#9BE8F5;
+  color: #323232;
+  border: #9BE8F5;
+  font-weight: 500;
+}
 
 
 /* CSS del menu profile */
@@ -257,7 +277,7 @@ hr{
 }
 
 
-/* CSS del carrito */
+/* CSS del carrito card */
 
 .inputCart{
   text-align: center;
@@ -266,4 +286,76 @@ hr{
 
 #cartCard {
   border:#f8d589 solid 2px;
+}
+
+.imgCart{
+  width: 5rem;
+  height: 5rem;
+}
+
+.cartProductPrice{
+  color:#249F3F;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: 'Acme',sans-serif;
+}
+
+.buttonErase{
+  background-color: #ED9C9C;
+  border: #ED9C9C;
+  color: #323232;
+  font-weight: 600;
+}
+
+.cartProductTitle{
+  font-size: 1rem;
+  font-family: 'Acme',sans-serif;
+}
+
+.cartProductShop{
+  font-size: 0.8rem;
+}
+
+/* CSS del carrito order */
+
+#cartFinalOrder{
+  border: #ED9C9C 2px solid;
+}
+
+.cartOrderTitle{
+  font-family: 'Acme', sans-serif;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  color: #323232;
+}
+
+#cartFinalOrder .button{
+  background-color: #f8d589;
+  color: #323232;
+  border:#f8d589;
+}
+
+.cuponInput{
+  border:#9BE8F5 solid 1px;
+}
+
+.cartOrderSub{
+  font-size: 0.8rem;
+  color: #323232;
+}
+
+#cartFinalOrder .hr{
+  border:#323232 3px dotted;
+  border-style: none none dotted; 
+}
+.cartOrderTotal{
+  font-size: 1.2;
+  font-weight: 700;
+  color: #323232;
+}
+.buttonCheckout{
+  background-color: #9BE8F5;
+  border: #9BE8F5;
+  color: #323232;
+  font-weight: 700;
 }

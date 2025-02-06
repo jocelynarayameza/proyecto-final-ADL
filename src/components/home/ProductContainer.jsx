@@ -35,8 +35,8 @@ const ProductContainer = ({ productos }) => {
               <div className="d-flex gap-5 w-50">
                 <Form.Select aria-label="Default select example">
                   <option>Ordenar por</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
+                  <option value="1">Menor a mayor precio</option>
+                  <option value="2">Mayor a menor precio</option>
                   <option value="3">Three</option>
                 </Form.Select>
                 <Form.Control size="sm" type="text" placeholder="Buscar" />

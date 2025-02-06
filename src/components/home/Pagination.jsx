@@ -19,7 +19,7 @@ const PaginationComponent = () => {
 
   return (
     <div >
-      <Pagination >{items}</Pagination>
+      <Pagination>{items}</Pagination>
     </div>
   );
 };

@@ -39,8 +39,8 @@ const CardDetail = () => {
               </Col>
               <Col>
                 <h2 className="title-acme">{producto.nombre}</h2>
-                <h1 className="text-info pb-2">Precio: ${producto.precio}</h1>
-                <h4 className="pb-2">Vendido por: {producto.vendedor}</h4>
+                <h1 className="textPrice pb-2"> ${producto.precio} CLP</h1>
+                <h4 className="pb-2 textShop">Vendido por: {producto.vendedor}</h4>
                 <p className="pb-5">Descripción: {producto.descripcion}</p>
                 <div>
                   <p>Cantidad disponible: {producto.cantidad}</p>
@@ -53,7 +53,7 @@ const CardDetail = () => {
                       +
                     </Button>
                   </div>
-                  <Button className="addCartButton mt-3">
+                  <Button className="addCartButton mt-3 px-4" variant="btn btn-warning">
                     Agregar al carrito
                   </Button>
                 </div>
