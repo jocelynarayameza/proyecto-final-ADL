@@ -5,80 +5,74 @@ import { Facebook,Instagram, TwitterX, PinMapFill, EnvelopeFill, TelephoneFill }
 const Footer = () => {
   return (
     <footer className='footer skyBlue'>
-      <Container fluid>
-        <Row className="justify-content-md-center">
-          <Col className='mt-1' xs={12} md={4}>
-            <Row>
-              <Col xs={6} md={6}>
-               <img className="mt-3 mb-0" src={logo} width="200" height="200" alt="logo footer moogle"/>
+      <Container>
+        <Row className=" d-flex justify-content-between">
+          <Col className='mt-4 d-flex justify-content-center' xs={12} sm={4} >
+            <Row >
+              <Col xs={6} className='mt-0'>
+                <p className='titleConfig mt-4'>Final Fantasy Marketplace</p>
               </Col>
-              <Col xs={6} md={6}>
-                <p className='titleConfig'>Final Fantasy Marketplace</p>
+              <Col xs={6}>
+               <img className="mb-0" src={logo} width="150" height="150" alt="logo footer moogle"/>
+              </Col>
+            </Row>
+          </Col>
+        
+          <Col xs={6} sm={4} className='mt-4'>
+            <h5>¡Visitanos!</h5>
+            <Row xs="auto">
+              <Col xs={1} className='me-2'>
+                <Facebook size={25}/>
+              </Col>
+              <Col xs="auto">
+                <p className='footerTextSocialContact'>Facebook</p>
+              </Col>
+            </Row>
+            <Row xs="auto">
+              <Col xs={1} className='me-2'>
+                <Instagram size={25}/>
+              </Col>
+              <Col>
+                <p className='footerTextSocialContact'>Instagram</p>
               </Col>
             </Row>
 
-
+            <Row xs="auto">
+              <Col xs={1} className='me-2'>
+                <TwitterX size={25}/>
+              </Col>
+              <Col xs="auto">
+              <p className='footerTextSocialContact'>Twitter/X</p>
+              </Col>
+            </Row>
           </Col>
-        
-          <Col className='mt-4' xs={12} md={6}>
-            <Row>
-              <Col xs={6} sm={5}>
-                <h5>¡Visitanos!</h5>
-                <Row xs="auto">
-                  <Col >
-                    <Facebook size={25}/>
-                  </Col>
-                  <Col >
-                    <p>Facebook</p>
-                  </Col>
-                </Row>
-                <Row xs="auto">
-                  <Col>
-                    <Instagram size={25}/>
-                  </Col>
-                  <Col>
-                    <p>Instagram</p>
-                  </Col>
-                </Row>
-                <Row xs="auto">
-                  <Col>
-                    <TwitterX size={25}/>
-                  </Col>
-                  <Col>
-                    <p>Twitter/X</p>
-                  </Col>
-                </Row>
+
+          <Col xs={6} sm={4} className='mt-4'>
+            <h5>¡Contáctanos!</h5>
+            <Row xs="auto">
+              <Col xs={1} className='me-2'>
+                <TelephoneFill size={25}/>
               </Col>
-
-              <Col xs={6} md={5}>
-                <h5>¡Contáctanos!</h5>
-                <Row xs="auto">
-                  <Col >
-                    <TelephoneFill size={25}/>
-                  </Col>
-                  <Col >
-                    <p>+56 9 1111 1111</p>
-                  </Col>
-                </Row>
-                <Row xs="auto">
-                  <Col>
-                    <EnvelopeFill size={25}/>
-                  </Col>
-                  <Col>
-                    <p>ff_market@gmail.com</p>
-                  </Col>
-                </Row>
-
-                <Row xs="auto">
-                  <Col>
-                    <PinMapFill size={25}/>
-                  </Col>
-                  <Col>
-                  <p>Calle 8, Lindblum, Gaia</p>
-                  </Col>
-                </Row>
+              <Col xs="auto">
+                <p className='footerTextSocialContact'>+56 9 1111 1111</p>
               </Col>
+            </Row>
+            <Row xs="auto">
+              <Col xs={1} className='me-2'>
+                <EnvelopeFill size={25}/>
+              </Col>
+              <Col>
+                <p className='footerTextSocialContact'>ff_market@gmail.com</p>
+              </Col>
+            </Row>
 
+            <Row xs="auto">
+              <Col xs={1} className='me-2'>
+                <PinMapFill size={25}/>
+              </Col>
+              <Col xs="auto">
+              <p className='footerTextSocialContact'>Calle 8, Lindblum, Gaia</p>
+              </Col>
             </Row>
           </Col>
 

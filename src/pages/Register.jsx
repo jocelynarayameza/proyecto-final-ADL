@@ -19,9 +19,6 @@ const Register = () => {
 
   const {registerUser}=useContext(UserContext)
 
-  
-  
-  
   const handleSubmit = (e)=> {
     e.preventDefault()
 
@@ -62,8 +59,8 @@ const Register = () => {
     <div className='registerForm'>
       <h1 id='titleText'>Registrar nueva cuenta</h1>
       <div className=' py-2 my-3 '>
-        <Container className='yellowColor py-5 '>
-          <Form onSubmit={handleSubmit} className='whiteColor py-3' >
+        <Container className='yellowColor py-5 rounded-3'>
+          <Form onSubmit={handleSubmit} className='whiteColor py-3 rounded-3 mx-5' >
           <Row>
             <Col md={12} lg={6} className='px-5'>
               <Form.Group className="mb-3"  controlId="formName">

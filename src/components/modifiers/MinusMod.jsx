@@ -1,29 +1,33 @@
 import React, { useContext, useEffect } from 'react'
 import { Button } from 'react-bootstrap'
 import { Dash } from 'react-bootstrap-icons'
+import { CartContext } from '../../context/CartContext'
 
-const MinusMod = ({itemCart}) => {
-  // const {cart,setCart} = useContext(CartContext)
+const MinusMod = ({product}) => {
+  const {cart,setCart} = useContext(CartContext)
 
-  // function Modquantity(id){
-  //   const newAdd=cart.map(item =>{
-  //     if(item.id===id){
-  //       return {...item, cantidad:itemCart.quantity-1}
-  //     }
-  //     return item
-  //   }
-  // )
-    // setCart(newAdd)
+  function ModquantityMinus(id){
+    
+    const newAdd=cart.map(item =>{
 
-  // useEffect (()=>{
-  //   Modquantity()
-  // },[])
+      if(item.id_product===id && product.total_quantity>1){
+        return {...item, total_quantity:product.total_quantity-1}
+      } else if (item.id_product===id && product.total_quantity<=1) {
+        return {...item, add:false, total_quantity:0};
+        
+      }
+      return item
+      })     
+    setCart(newAdd)
+  }
+
+ 
   
   return (
     <div>
       <Button className='p-1' variant='light'
-      // onClick={() => Modquantity(itemCart.id)}
-      ><Dash size={10}/>
+      onClick={() => ModquantityMinus(product.id)}
+      ><Dash size={15}/>
       </Button>
     </div>
   )
