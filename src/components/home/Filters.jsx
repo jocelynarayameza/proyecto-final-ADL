@@ -18,12 +18,12 @@ const Filters = () => {
       <Container>
         <Row>
           <Col>
-            <h4 className="text-center">Filtros</h4>
+            <h4 className="text-center filterText">Filtros</h4>
           </Col>
         </Row>
         <Row>
-          <Col  className=" bg-warning-subtle d-flex flex-column" >
-            <h4 className="text-center p-3">Categoría</h4>
+          <Col  className=" bg-warning-subtle d-flex flex-column rounded-3" >
+            <h4 className="text-center p-3 categoryText">Categoría</h4>
             <Form>
               {filtros.map((filtro, index) => (
                 <Form.Check
@@ -36,6 +36,7 @@ const Filters = () => {
               ))}
             </Form>
             <hr />
+            <h4 className="text-center pt-0 p-3 categoryText">Precio</h4>
             <Form.Group>
               <Form.Label>$0-100 </Form.Label>
               <Form.Range min="0" max="1000" step="10" />

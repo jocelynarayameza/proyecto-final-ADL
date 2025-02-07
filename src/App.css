@@ -181,6 +181,25 @@ hr{
   color:#323232;
 }
 
+/* CSS del home */
+.searchOrderBy{
+  border:#45a159 solid 2px;
+}
+
+.filterText{
+  font-size: 2rem;
+  font-family: 'Acme',sans-serif;
+}
+
+.categoryText{
+  font-size: 1.4rem;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.form-range{
+  background: ;
+}
 
 /* CSS cards home */
 .title-acme {
@@ -196,6 +215,16 @@ hr{
   font-weight: 700;
 }
 
+.page-item .page-link{
+  background:#fff5e1;
+  color:#323232;
+  border:#68D5E8 1px dashed;
+}
+
+.active .page-link{
+  background:#68D5E8;
+  color:#323232;
+}
 /* CSS Products */
 
 .img {

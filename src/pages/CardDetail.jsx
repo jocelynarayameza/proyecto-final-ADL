@@ -35,7 +35,7 @@ const CardDetail = () => {
       <Container>
         <h1 className="title-acme text-center my-4">Detalle del producto</h1>
         <Row className="justify-content-center my-5">
-          <Col className="border border-danger-subtle p-4">
+          <Col className="border border-2 border-danger-subtle p-4">
             <Row className="align-items-center my-4">
               <Col className="text-center pe-4 mb-5" md={6} sm={12}>
                 <Image src={producto.foto} className="w-75" />
