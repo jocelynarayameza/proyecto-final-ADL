@@ -125,12 +125,18 @@ hr{
 .titleConfig{
   font-size: 1.4rem;
   font-family: 'MedievalSharp', sans-serif !important;
-  margin-top: 4rem;
 
+}
+.footer .titleConfig{
+  text-align: center;
 }
 
 .footer-text{
   text-align: center;
+}
+
+.footerTextSocialContact{
+  font-size: 1rem;
 }
 
 /* CSS de formulario register y login */

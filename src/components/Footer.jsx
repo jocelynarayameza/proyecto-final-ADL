@@ -7,57 +7,54 @@ const Footer = () => {
     <footer className='footer skyBlue'>
       <Container>
         <Row className=" d-flex justify-content-between">
-          <Col className='mt-1 d-flex justify-content-between' xs={12} md={3} >
-            {/* <Row className="">
-              <Col xs="auto"> */}
-               <img className="mt-3 mb-0" src={logo} width="200" height="200" alt="logo footer moogle"/>
-              {/* </Col>
-              <Col xs="auto"> */}
-                <p className='titleConfig'>Final Fantasy Marketplace</p>
-              {/* </Col>
-            </Row> */}
+          <Col className='mt-4 d-flex justify-content-center' xs={12} sm={4} >
+            <Row >
+              <Col xs={6} className='mt-0'>
+                <p className='titleConfig mt-4'>Final Fantasy Marketplace</p>
+              </Col>
+              <Col xs={6}>
+               <img className="mb-0" src={logo} width="150" height="150" alt="logo footer moogle"/>
+              </Col>
+            </Row>
           </Col>
         
-          <Col className='mt-4' xs={12} md={3}>
-            <Row>
-              <Col xs={6} sm={5}>
-                <h5>¡Visitanos!</h5>
-                <Row xs="auto">
-                  <Col >
-                    <Facebook size={25}/>
-                  </Col>
-                  <Col >
-                    <p>Facebook</p>
-                  </Col>
-                </Row>
-                <Row xs="auto">
-                  <Col>
-                    <Instagram size={25}/>
-                  </Col>
-                  <Col>
-                    <p>Instagram</p>
-                  </Col>
-                </Row>
-                <Row xs="auto">
-                  <Col>
-                    <TwitterX size={25}/>
-                  </Col>
-                  <Col>
-                    <p>Twitter/X</p>
-                  </Col>
-                </Row>
+          <Col xs={6} sm={4} className='mt-4'>
+            <h5>¡Visitanos!</h5>
+            <Row xs="auto">
+              <Col xs={1} className='me-2'>
+                <Facebook size={25}/>
+              </Col>
+              <Col xs="auto">
+                <p className='footerTextSocialContact'>Facebook</p>
+              </Col>
+            </Row>
+            <Row xs="auto">
+              <Col xs={1} className='me-2'>
+                <Instagram size={25}/>
+              </Col>
+              <Col>
+                <p className='footerTextSocialContact'>Instagram</p>
+              </Col>
+            </Row>
+
+            <Row xs="auto">
+              <Col xs={1} className='me-2'>
+                <TwitterX size={25}/>
+              </Col>
+              <Col xs="auto">
+              <p className='footerTextSocialContact'>Twitter/X</p>
               </Col>
             </Row>
           </Col>
 
-          <Col xs={6} md={6}>
+          <Col xs={6} sm={4} className='mt-4'>
             <h5>¡Contáctanos!</h5>
             <Row xs="auto">
               <Col xs={1} className='me-2'>
                 <TelephoneFill size={25}/>
               </Col>
               <Col xs="auto">
-                <p>+56 9 1111 1111</p>
+                <p className='footerTextSocialContact'>+56 9 1111 1111</p>
               </Col>
             </Row>
             <Row xs="auto">
@@ -65,7 +62,7 @@ const Footer = () => {
                 <EnvelopeFill size={25}/>
               </Col>
               <Col>
-                <p>ff_market@gmail.com</p>
+                <p className='footerTextSocialContact'>ff_market@gmail.com</p>
               </Col>
             </Row>
 
@@ -74,7 +71,7 @@ const Footer = () => {
                 <PinMapFill size={25}/>
               </Col>
               <Col xs="auto">
-              <p>Calle 8, Lindblum, Gaia</p>
+              <p className='footerTextSocialContact'>Calle 8, Lindblum, Gaia</p>
               </Col>
             </Row>
           </Col>
