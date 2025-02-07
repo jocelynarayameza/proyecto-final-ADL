@@ -13,10 +13,11 @@ const MinusMod = ({product}) => {
       if(item.id_product===id && product.total_quantity>1){
         return {...item, total_quantity:product.total_quantity-1}
       } else if (item.id_product===id && product.total_quantity<=1) {
-        return {...item, add:!item.add, total_quantity:0}
+        return {...item, add:false, total_quantity:0};
+        
       }
       return item
-      })
+      })     
     setCart(newAdd)
   }
 

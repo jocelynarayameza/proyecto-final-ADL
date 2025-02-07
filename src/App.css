@@ -236,6 +236,8 @@ hr{
 .textProfile:hover{
   background-color:#f8d589;
   color: #323232;
+  border-radius: 10px;
+  
 }
 
 

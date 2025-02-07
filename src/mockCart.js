@@ -27,8 +27,16 @@ const productos = [{
     product_description: 'Juego para Play Station 1, trae 4 discos. Idioma: Espanol',
     product_quantity: 3,
     id_seller:'Retro gamer'
+},{
+    id_product: 4,
+    product_name: 'Pin Haurchefant',
+    product_price: 14990,
+    product_photo: 'https://i.etsystatic.com/18833319/r/il/33060a/6237173934/il_794xN.6237173934_n489.jpg',
+    category: 'Accesorios',
+    product_description: 'Pin de personaje de FFXIV Haurchefant.Origen: Indonesia',
+    product_quantity: 5,
+    id_seller:'LeorenArts'
 }];
-
 export const ProductsCart = async () => {
     return productos
 }

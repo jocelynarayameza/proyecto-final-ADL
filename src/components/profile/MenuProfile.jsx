@@ -33,25 +33,25 @@ const MenuProfile = () => {
           <Col xs={12} sm={9}>
             <Nav justify >
               <Nav.Item>
-                <Nav.Link as={Link} to="/perfil" className={profileActive==='about-me'? 'textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('about-me')} onLoad={()=> UpdateProfileActive('about-me')}>
+                <Nav.Link as={Link} to="/perfil" className={profileActive==='about-me'? 'rounded-3 textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('about-me')} onLoad={()=> UpdateProfileActive('about-me')}>
                   <Person size={30}/>
                   <p>Mis datos</p>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/perfil/nueva-venta" onClick={()=> UpdateProfileActive('new-post')} className={profileActive==='new-post'? 'textProfile profileLink':'textProfile'} >
+                <Nav.Link as={Link} to="/perfil/nueva-venta" onClick={()=> UpdateProfileActive('new-post')} className={profileActive==='new-post'? 'rounded-3 textProfile profileLink':'textProfile'} >
                   <BagPlus size={30}/>
                   <p>Nueva venta</p>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/perfil/mis-productos" className={profileActive==='my-posts'? 'textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('my-posts')}>
+                <Nav.Link as={Link} to="/perfil/mis-productos" className={profileActive==='my-posts'? ' rounded-3 textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('my-posts')}>
                   <Shop size={30}/>
                   <p>Mis productos</p>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/perfil/pedidos-anteriores" className={profileActive==='my-orders'? 'textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('my-orders')}>
+                <Nav.Link as={Link} to="/perfil/pedidos-anteriores" className={profileActive==='my-orders'? 'rounded-3 textProfile profileLink':'textProfile'} onClick={()=> UpdateProfileActive('my-orders')}>
                   <CartCheck size={30}/>
                   <p>Pedidos anteriores</p>
                 </Nav.Link>

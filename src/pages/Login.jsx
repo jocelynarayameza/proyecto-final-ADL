@@ -20,8 +20,8 @@ const Login = () => {
   return (
     <div className='loginForm'>
       <h1 id='titleText'>Iniciar sesion</h1>
-        <Container className='yellowColor py-5 my-5'>
-          <Form onSubmit={handleSubmit} className='d-flex flex-column align-items-center justify-content-center whiteColor py-3'>
+        <Container className='yellowColor py-5 my-5 rounded-3'>
+          <Form onSubmit={handleSubmit} className='rounded-3 mx-5 d-flex flex-column align-items-center justify-content-center whiteColor py-3'>
             <Form.Group className="mb-3"  controlId="formBasicEmail">
               <Form.Label>Correo electronico</Form.Label>
               <Form.Control required className='registerLoginColor' type="email" placeholder="Vivi@tienda.cl" {...email}/>

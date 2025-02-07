@@ -23,7 +23,10 @@ const cartCard = (product) => {
   }
 
   return (
+    <>
+    {count>0?
     <div id="cartCard" className='mb-3 mx-2 rounded-3'>
+    
       <Container>
         <Row >
           <Col xs={12} sm={6} >
@@ -58,8 +61,10 @@ const cartCard = (product) => {
             </Row>
           </Col>
         </Row>
-      </Container>
+      </Container> 
     </div>
+    :null}
+    </>
   )
 }
 
