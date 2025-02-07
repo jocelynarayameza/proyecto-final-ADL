@@ -3,10 +3,10 @@ import ProductContainer from "../components/home/ProductContainer";
 import useFetchProducts from "../assets/hooks/useFetchProducts";
 
 const Home = () => {
-  const productos = useFetchProducts();
+  const products = useFetchProducts();
   return (
     <>
-      <ProductContainer productos= {productos} />
+      <ProductContainer products= {products} />
     </>
   );
 };
