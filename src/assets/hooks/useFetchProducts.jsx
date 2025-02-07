@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
-import { obtenerProductos } from "../../mockproducts";
+import { getProducts } from "../../mockproducts";
 const useFetchProducts = () => {
-    const [productos, setProductos] = useState([]);
+    const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const fetchProductos = async () => {
-      const data = await obtenerProductos();
-      setProductos(data);
+    const fetchProducts = async () => {
+      const data = await getProducts();
+      setProducts(data);
     };
-    fetchProductos();
+    fetchProducts();
   }, []);
 
-  return productos
+  return products
 }
 
 export default useFetchProducts

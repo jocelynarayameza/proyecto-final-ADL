@@ -9,7 +9,7 @@ import Cart from './pages/Cart'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
-import MisProductos from './pages/MisProductos'
+import MyProducts from './pages/MyProducts.jsx';
 import NuevaVenta from './pages/NuevaVenta'
 import Profile from './pages/Profile'
 import NavbarComponent from './components/NavbarComponent.jsx'
@@ -26,6 +26,7 @@ import EditPost from './pages/EditPost.jsx';
 import MyOrders from './pages/MyOrders.jsx';
 import MenuProfile from './components/profile/MenuProfile.jsx';
 import NotFound from './pages/NotFound.jsx';
+import OrderDetail from './pages/OrderDetail.jsx';
 
 
 function App() {
@@ -41,11 +42,13 @@ function App() {
         <Route path="/registro" element={<Register />} />
         <Route path="/perfil/" element={<Profile />} /> 
         <Route path="/perfil/nueva-venta" element={<NuevaVenta />} />
-        <Route path="/perfil/mis-productos" element={<MisProductos />} />
+        <Route path="/perfil/mis-productos" element={<MyProducts />} />
 
         <Route path="/perfil/mis-productos/:id" element={<EditPost/>} /> 
 
         <Route path="/perfil/pedidos-anteriores" element={<MyOrders />} />
+        <Route path="/perfil/pedidos-anteriores/:id" element={<OrderDetail />} />
+
 
         <Route path="/carrito" element={<Cart />} />
         <Route path='*' element={<NotFound/>}></Route>

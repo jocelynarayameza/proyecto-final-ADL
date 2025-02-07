@@ -4,7 +4,7 @@ import PostContainer from '../components/profile/PostContainer'
 import MenuProfile from '../components/profile/MenuProfile'
 
 
-const MisProductos = () => {
+const MyProducts = () => {
   return (
     <>
     <MenuProfile/>
@@ -14,4 +14,4 @@ const MisProductos = () => {
   )
 }
 
-export default MisProductos
+export default MyProducts

@@ -1,4 +1,4 @@
-const productos = [{
+const products = [{
     id: 1,
     nombre: 'Polera FF VI',
     precio: '20000',
@@ -66,6 +66,6 @@ const productos = [{
 
 ];
 
-export const obtenerProductos = async () => {
-    return productos
+export const getProducts = async () => {
+    return products
 }
