@@ -4,14 +4,9 @@ import { Plus } from 'react-bootstrap-icons'
 import { CartContext } from '../../context/CartContext'
 
 const PlusMod = ({product}) => {
-   
-  
   const {cart,setCart} = useContext(CartContext)
 
   function Modquantity(id){
-
-    console.log("PlusMod ",product);
-
     const newAdd=cart.map(item =>{
       if(item.id_product===id){
         return {...item, total_quantity:product.total_quantity+1}

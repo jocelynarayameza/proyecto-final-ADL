@@ -7,7 +7,6 @@ import moogle from '../../assets/img/moogle.png'
 
 
 const cartCard = (product) => {
-  console.log("cartCard" +product.id);
   
   const precioFormat= product.price
   const count=product.total_quantity

@@ -6,12 +6,17 @@ const CartContext= createContext()
 
 const CartProvider = ({children}) => {
   const [cart,setCart]=useState([])
+  
+  let total= cart.reduce((accumulator ,item) => {
+    return accumulator += (parseInt(item.product_price)*parseInt(item.total_quantity))}, 0)
 
-//   let total= cart.reduce((accumulator ,item) => {
-//     return accumulator += (parseInt(item.product_price)*parseInt(item.cantidad));
-//  }, 0)
- 
-//  const totalCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(total)
+ const totalCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(total)
+ const delivery=3000
+ const totalDelivery = new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(delivery)
+ const discount=0
+ const totalDiscount = new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(discount)
+ const Order=total+delivery+discount
+ const totalOrder= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(Order)
 
   const getData = async () =>{
     const data= await ProductsCart()
@@ -19,10 +24,7 @@ const CartProvider = ({children}) => {
     // console.log(response.data);
     
     let newData=data.map(item =>({...item, total_quantity:1, add:true}))
-
-    setCart (newData)
-    console.log("CartContexst25" , cart, newData);
-    
+    setCart (newData);
   }
 
   useEffect (()=>{
@@ -30,7 +32,7 @@ const CartProvider = ({children}) => {
   },[])
   
 
-  return <CartContext.Provider value={{cart,setCart}}>
+  return <CartContext.Provider value={{cart,setCart,totalCLP,totalDelivery,totalDiscount, totalOrder}}>
     {children}
   </CartContext.Provider>
 }

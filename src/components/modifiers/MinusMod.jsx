@@ -4,11 +4,9 @@ import { Dash } from 'react-bootstrap-icons'
 import { CartContext } from '../../context/CartContext'
 
 const MinusMod = ({product}) => {
-  // console.log(product);
   const {cart,setCart} = useContext(CartContext)
 
   function ModquantityMinus(id){
-    console.log(id);
     
     const newAdd=cart.map(item =>{
 

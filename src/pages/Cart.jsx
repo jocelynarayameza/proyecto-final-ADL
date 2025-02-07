@@ -6,12 +6,6 @@ import { CartContext } from '../context/CartContext'
 
 const Cart = () => {
   const {cart}=useContext(CartContext)
-
-  console.log("9cartjsx" , cart);
-  
-  // console.log(cart);
-  
-  
   // const cartTrue= cart.filter(item=>(item.add===true))
   
 
