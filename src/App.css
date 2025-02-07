@@ -1,3 +1,7 @@
+*{
+  color:#323232;
+}
+
 /* Custom fonts */
 @font-face{
   font-family: MedievalSharp;
@@ -329,31 +333,6 @@ hr{
   }
 
 
-/* CSS My Products  */
-
- .imgMyProducts {
-  height: 8rem;
-  width: 8rem;
-
- }
-
- .cardMyProducts {
-  min-height: 10rem;
-  margin: 1rem;
- }
-
- /*Edit Post*/
-.editPostColor {
-  border: #ED9C9C solid 2px;
-  
-}
-
-.editButton {
-  width: 20rem;
-  background-color: #9BE8F5;
-  color: #323232;
-  border: #9BE8F5;
-}
 
 .imgCart{
   width: 4rem;
@@ -426,6 +405,33 @@ hr{
   color: #323232;
   font-weight: 700;
 }
+
+/* CSS My Products  */
+
+ .imgMyProducts {
+  height: 8rem;
+  width: 8rem;
+
+ }
+
+ .cardMyProducts {
+  min-height: 10rem;
+  margin: 1rem;
+ }
+
+ /*Edit Post*/
+.editPostColor {
+  border: #ED9C9C solid 2px;
+  
+}
+
+.editButton {
+  width: 20rem;
+  background-color: #9BE8F5;
+  color: #323232;
+  border: #9BE8F5;
+}
+
 /*CSS orders*/
 
 .ordersImg {

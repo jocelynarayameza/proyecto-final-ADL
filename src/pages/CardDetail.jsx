@@ -41,6 +41,7 @@ const CardDetail = () => {
                 <Image src={product.foto} className="w-75" />
               </Col>
               <Col>
+
                 <h2 className="title-acme">{producto.nombre}</h2>
                 <h1 className="textPrice pb-2"> ${producto.precio} CLP</h1>
                 <h4 className="pb-2 textShop">Vendido por: {producto.vendedor}</h4>
