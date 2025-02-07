@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Container, Row, Col } from "react-bootstrap";
 
 const Filters = () => {
-  const filtros = [
+  const filtersArray = [
     "Figura",
     "Peluche",
     "Pixel Art",
@@ -25,13 +25,13 @@ const Filters = () => {
           <Col  className=" bg-warning-subtle d-flex flex-column" >
             <h4 className="text-center p-3">Categoría</h4>
             <Form>
-              {filtros.map((filtro, index) => (
+              {filtersArray.map((filter, index) => (
                 <Form.Check
                   className="pb-3"
                   key={index}
                   type="checkbox"
                   id={index}
-                  label={filtro}
+                  label={filter}
                 />
               ))}
             </Form>

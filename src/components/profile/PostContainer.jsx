@@ -2,10 +2,9 @@ import React from "react";
 import useFetchProducts from "../../assets/hooks/useFetchProducts";
 import PostCard from "./PostCard";
 import { Container, Row, Col } from "react-bootstrap";
-import MenuProfile from "./MenuProfile";
 
 const PostContainer = () => {
-  const productos = useFetchProducts();
+  const products = useFetchProducts();
   return (
     <Container>
       
@@ -16,7 +15,7 @@ const PostContainer = () => {
       </Row>
       <Row className="m-3 d-flex justify-content-center">
         <Col>
-          {productos.map((prod) => (
+          {products.map((prod) => (
             <PostCard key={prod.id} {...prod} />
           ))}
         </Col>
