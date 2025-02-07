@@ -37,7 +37,7 @@ const EditPost = () => {
                     className="editPostColor"
                     type="text"
                     placeholder={product.nombre}
-                    disabled
+                    
                   />
                 </Form.Group>
 
@@ -47,7 +47,7 @@ const EditPost = () => {
                     className="editPostColor"
                     type="text"
                     placeholder={product.foto}
-                    disabled
+                    
                   />
                 </Form.Group>
 
@@ -58,7 +58,7 @@ const EditPost = () => {
                     className="editPostColor"
                     type="text"
                     placeholder="Vivi_tienda"
-                    disabled
+                    
                   >
                     <option>{product.categoria}</option>
                   </Form.Select>
@@ -71,7 +71,7 @@ const EditPost = () => {
                     className="editPostColor"
                     type="text"
                     placeholder={product.precio}
-                    disabled
+                    
                   />
                 </Form.Group>
 
@@ -81,7 +81,7 @@ const EditPost = () => {
                     className="editPostColor"
                     type="text"
                     placeholder={product.cantidad}
-                    disabled
+                    
                   />
                 </Form.Group>
 
@@ -93,7 +93,7 @@ const EditPost = () => {
                     as="textarea"
                     rows={6}
                     placeholder={product.descripcion}
-                    disabled
+                    
                   />
                 </Form.Group>
               </Col>

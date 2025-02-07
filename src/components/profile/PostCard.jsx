@@ -10,7 +10,7 @@ const PostCard = ({ nombre, descripcion, foto, id }) => {
 
   return (
     <Container>
-      <Row className="border border-danger-subtle cardMyProducts rounded-3">
+      <Row className="border border-danger-subtle cardMyProducts rounded-3 border-2">
         <Col sm={12} md={3} className="p-2 d-flex justify-content-center align-items-center">
           <img src={foto} alt="" className="imgMyProducts" />
         </Col>
