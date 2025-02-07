@@ -5,7 +5,7 @@ import PaginationComponent from "./Pagination";
 import { Container, Row, Col, Form, Button, Offcanvas } from "react-bootstrap";
 import { useState } from "react";
 
-const ProductContainer = ({ productos }) => {
+const ProductContainer = ({ products }) => {
 
   const [showFilters, setShowFilters] = useState(false);
 
@@ -42,12 +42,12 @@ const ProductContainer = ({ productos }) => {
               </div>
             </Row>
             <Col className="d-flex flex-wrap justify-content-around m-3">
-              {productos.map((prod) => (
+              {products.map((prod) => (
                 <ProductCard key={prod.id} {...prod} />
               ))}
             </Col>
             <Col className="d-flex justify-content-center m-4">
-            <PaginationComponent productos={productos} />
+            <PaginationComponent products={products} />
             </Col>
           </Col>
           
