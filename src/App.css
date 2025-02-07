@@ -1,3 +1,7 @@
+*{
+  color:#323232;
+}
+
 /* Custom fonts */
 @font-face{
   font-family: MedievalSharp;

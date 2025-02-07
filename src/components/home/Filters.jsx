@@ -38,8 +38,8 @@ const Filters = () => {
             <hr />
             <h4 className="text-center pt-0 p-3 categoryText">Precio</h4>
             <Form.Group>
-              <Form.Label>$0-100 </Form.Label>
-              <Form.Range min="0" max="1000" step="10" />
+              <Form.Label>$0-100000 </Form.Label>
+              <Form.Range min="0" max="100000" step="10" />
             </Form.Group>
           </Col>
         </Row>
