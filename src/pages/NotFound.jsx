@@ -5,7 +5,7 @@ import moogleNotFound from "../assets/img/sadMoogle.png"
 const NotFound = () => {
   return (
     <div id='notFound' className=''>
-      <Container className='my-5 yellowColor py-4'>
+      <Container className='my-5 yellowColor py-4 rounded-3'>
         <Row>
          <Col xs={12} sm={6} className='d-flex flex-column align-items-center justify-content-center titleNF'>
           <div >

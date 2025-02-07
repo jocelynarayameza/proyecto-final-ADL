@@ -1,12 +1,14 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const UserContext=createContext()
 
 const UserProvider = ({children}) => {
+  const navigate = useNavigate()
 
   const [user,setUser] = useState([])
-  const [userLogged,setUserLogged] = useState(false)
+
 
     const registerUser = async (datos)  => {
       const response= await axios.post("http://localhost:3001/registro",{email: datos.email, email_confirm:datos.email_confirm,
@@ -28,11 +30,11 @@ const UserProvider = ({children}) => {
   const logInUser = async (datos) => {
     const response= await axios.post("http://localhost:3001/login", {email: datos.email, password: datos.password})
     localStorage.setItem("token", response.data.token)
-    console.log(response.data.msg);
     
     if (response.data.msg=="Autentificacion correcta"){
       setUser( {email: response.data.email, logged: true, token: response.data.token})
-      console.log(user);
+      navigate('/')
+
       
       alert("Autentificacion correcta")
     } else if (response.data.msg="Contrasena incorrecta") {
@@ -45,7 +47,7 @@ const UserProvider = ({children}) => {
   }
 
 
-  return <UserContext.Provider value={{user,setUser,registerUser,logInUser,userLogged}}>
+  return <UserContext.Provider value={{user,setUser,registerUser,logInUser}}>
   {children}
   </UserContext.Provider>
 
