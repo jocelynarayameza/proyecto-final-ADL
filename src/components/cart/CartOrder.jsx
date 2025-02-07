@@ -38,7 +38,7 @@ const cartOrders = () => {
          <p className='mb-1 cartOrderSub'>¿Tienes un cupon de descuento?</p>
          <Form onSubmit={cuponApply}>
           <Col className='d-flex'>
-            <Form.Control size="sm" className='me-3 cuponInput' placeholder="Ingresa el codigo"{...cuponDiscount}></Form.Control>
+            <Form.Control onInput={(e) => e.target.value = ("" + e.target.value).toUpperCase()} size="sm" className='me-3 cuponInput' placeholder="Ingresa el codigo"{...cuponDiscount}></Form.Control>
             <Button className='button' type='submit'><CheckLg/></Button>
           </Col>
          </Form>
