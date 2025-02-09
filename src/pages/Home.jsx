@@ -14,7 +14,7 @@ const Home = () => {
           <Filters />
         </Col>
         <Col md={8} lg={9} xl={10}>
-          <ProductContainer productos= {products} />
+          <ProductContainer products= {products} />
         </Col>
       </Row>
     </Container>

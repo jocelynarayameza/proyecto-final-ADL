@@ -14,14 +14,14 @@ const ProductCard = ({ nombre, precio, foto, id }) => {
   return (
     <div id="cardProduct">
     <Card style={{ width: "16rem" }} className="m-5 p-3 border-2 border border-danger-subtle">
-      <Card.Img variant="top" src= {foto} className="img img-fluid"  />
+      <Card.Img variant="top" src= {foto} className="img img-fluid  rounded-3"  />
       <Card.Body>
         <Card.Title className="title-acme">{nombre}</Card.Title>
         <Card.Text>
           <p className="priceText">{priceCLP}</p>
         </Card.Text>
         <Button variant="info" className="mb-2 goDetails px-4" onClick={() => details(id)}>Ver detalles</Button>
-        <Button disabled={user.logged ? "":"false"} variant="warning" className="addCartButton" >Agregar al carrito</Button>
+        <Button variant="warning" disabled={user.logged ? "":"false"} className="addCartButton">Agregar al carrito</Button>
       </Card.Body>
     </Card>     
     </div>

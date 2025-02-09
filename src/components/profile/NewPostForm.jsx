@@ -41,14 +41,14 @@ const NewPostForm = () => {
 
 
       <Container className='align-items-center mt-1 mb-4'>
-        <p>Buscar producto existente</p>
+        <Form.Label>Buscar producto existente</Form.Label>
         <Form inline onSubmit={handleSubmit} className=''>
           <Row>
             <Col xs={10} sm={9}>
               <Form.Control type="text" placeholder="Figura Zidane FFXIV" className=" mr-sm-2 newPostColor" {...search}/>
             </Col>
             <Col xs={2} sm={3}>
-              <Button variant="info" type="submit" className='skyBlue'><Search size={20}/></Button>
+              <Button variant="info" type="submit" className='searchButton'><Search size={20}/></Button>
             </Col>
           </Row>
         </Form>

@@ -13,7 +13,7 @@ import { CartContext } from '../context/CartContext';
 
 const NavbarComponent = () => {
   let {user,setUser} = useContext(UserContext)
-  const userLogged=true
+  const userLogged=user.logged
   const {totalOrder}=useContext(CartContext)
   
   let {activeLink,setActiveLink,setProfileActive} = useContext(ActiveContext);

@@ -17,7 +17,7 @@ const ProductContainer = ({ products }) => {
         <Col xs={12} sm={12} md={6} >
           <Form.Group className="d-flex mb-2">
             <Form.Control className="searchOrderBy" size="md" type="text" placeholder="Buscar" />
-            <Button variant="outline-success border-2"><Search size={20}/></Button>
+            <Button variant="success border-2 searchButtonHome"><Search size={20}/></Button>
           </Form.Group>
         </Col>
 

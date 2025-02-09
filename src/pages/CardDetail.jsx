@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getProducts } from "../mockproducts.js";
 import { Image, Button, Col, Row, Container } from "react-bootstrap";
 import { UserContext } from "../context/UserContext.jsx";
+import { Link } from "react-bootstrap-icons";
 const CardDetail = () => {
   const {user} = useContext(UserContext)
-
+  const navigate = useNavigate()
 
   const { id } = useParams();
   const [product, setProduct] = useState({});
@@ -31,24 +32,31 @@ const CardDetail = () => {
     products();
   }, [id]);
 
+  const goback = () =>{
+    navigate('/')
+  }
+
+
+  const totalCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(product.precio)
+
   return (
-    <>
+    <div id="cardDetail" className="mx-3">
       <Container>
-        <h1 className="title-acme text-center my-4">Detalle del producto</h1>
+        <h1 id='titleText' className="text-center my-4">Detalle del producto</h1>
         <Row className="justify-content-center my-5">
-          <Col className="border border-2 border-danger-subtle p-4">
+          <Col className="border border-2 border-danger-subtle rounded-3 p-4">
             <Row className="align-items-center my-4">
               <Col className="text-center pe-4 mb-5" md={6} sm={12}>
-                <Image src={product.foto} className="w-75" />
+                <Image src={product.foto} className="w-75 rounded-3" />
               </Col>
               <Col>
 
                 <h2 className="title-acme">{product.nombre}</h2>
-                <h1 className="textPrice pb-2"> ${product.precio} CLP</h1>
+                <h1 className="textPrice pb-2"> {totalCLP} CLP</h1>
                 <h4 className="pb-2 textShop">Vendido por: {product.vendedor}</h4>
                 <p className="pb-5">Descripción: {product.descripcion}</p>
                 <div>
-                  <p>Cantidad disponible: {product.cantidad}</p>
+                  <p className="textShop">Cantidad disponible: {product.cantidad}</p>
                   <div className="d-flex align-items-baseline">
                     <Button variant="light" onClick={decreaseQuantity}>
                       -
@@ -58,16 +66,23 @@ const CardDetail = () => {
                       +
                     </Button>
                   </div>
-                  <Button disabled={user.logged ? "":"false"} className="addCartButton mt-3 px-4" variant="warning">
-                    Agregar al carrito
-                  </Button>
                 </div>
-              </Col>
+                
+                <Col className="">
+                   <Button disabled={user.logged ? "":"false"} className="addCartButton mt-3 px-3 mx-2" variant="warning">
+                      Agregar al carrito
+                    </Button>
+                  <Button onClick={goback} className="goDetails mt-3 px-3 mx-2" variant="info">
+                    Atras
+                  </Button>
+                </Col>
+        
+                </Col>
             </Row>
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
 

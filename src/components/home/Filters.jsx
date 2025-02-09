@@ -18,7 +18,7 @@ const Filters = () => {
       <Container>
         <Row>
           <Col>
-            <h4 className="text-center filterText">Filtros</h4>
+            <h4 id='titleText' className="text-center filterText">Filtros</h4>
           </Col>
         </Row>
         <Row>
