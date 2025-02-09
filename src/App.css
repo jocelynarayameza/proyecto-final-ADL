@@ -1,3 +1,7 @@
+*{
+  color: var(--blackColor);
+}
+
 /* Custom fonts */
 @font-face{
   font-family: MedievalSharp;
@@ -9,6 +13,14 @@
   src: url('../src/assets/fonts/Acme-Regular.ttf');
 }
 
+:root {
+  --yellowColor: #FAE5B8;
+  --redColor:  #ED9C9C;
+  --skyBlue:#9BE8F5;
+  --whiteColor:rgb(255, 255, 255);
+  --greenColor:#249F3F;
+  --blackColor:#323232;
+}
 
 
 #titleText{
@@ -46,7 +58,7 @@ hr{
 }
 
 .textColor {
-  color: #323232;
+  color: var(--blackColor);
 }
 
 .whiteColor {
@@ -62,7 +74,7 @@ hr{
 /* CSS del Navbar */
 
 #navbarConfig{
-  padding: 0;
+  background-color: var(--skyBlue);
 }
 
  .textConfig{
@@ -70,18 +82,21 @@ hr{
   font-weight: 500;
 }
  .backHover{
-  border-radius: 10%;
+  border-radius: 5px;
 }
 .backHover:hover{
   background-color: #323232;
-  color: #e4e4e4 !important;
+  color: var(--whiteColor) !important;
 }
 
 .navbar-link.active {
   font-weight: 600;
-  color: #323232!important;
-  border: #323232 solid 1px;
+  color: var(--blackColor);
+  text-decoration: underline;
+}
 
+.navbar-link.active:hover{
+  color: var(--whiteColor);
 }
 
 
@@ -99,24 +114,26 @@ hr{
 
 #header .box {
   padding: 3rem 3rem;
-  background: linear-gradient(90.21deg, rgba(0, 0, 0, 0.5) -5.91%, rgba(0, 0, 0, 0.5) 111.58%);
+  background: rgba(12, 12, 12, 0.65);
   margin: auto;
   text-align: center;
 }
 
 #header h1 {
-  color: aliceblue;
-  font-size: 2.5rem;
+  color: var(--whiteColor);
+  font-size: 2.8rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
-  margin-bottom: 2rem;
   font-family: 'MedievalSharp', sans-serif !important
 }
 
 #header p {
-  color: #e4e4e4;
-  font-size: 1.5rem;
+  color: var(--whiteColor);
+  font-size: 1.25rem;
   letter-spacing: 0.1rem;
+}
+#header hr{
+  border-top: 0.3rem dotted var(--whiteColor);
 }
 
 
@@ -149,10 +166,10 @@ hr{
 
 .registerLoginButton{
   width: 20rem;
-  background-color: #9BE8F5;
-  color: #323232;
+  background-color: var(--skyBlue);
+  color: var(--blackColor);
   padding: 0;
-  border: #9BE8F5;
+  border: var(--skyBlue);
 }
 
 .registerLoginButtonText{
@@ -178,28 +195,49 @@ hr{
   margin-top: 0.5rem;
   font-weight: 600;
   text-decoration:underline;
-  color:#323232;
+  color: var(--blackColor);
 }
 
 /* CSS del home */
 .searchOrderBy{
-  border:#45a159 solid 2px;
+  border:var(--greenColor) solid 2px;
 }
 
-.filterText{
+#filters .filterText{
   font-size: 2rem;
   font-family: 'Acme',sans-serif;
 }
 
-.categoryText{
+ #filters .categoryText{
   font-size: 1.4rem;
   text-decoration: underline;
   font-weight: 600;
+  color: var(--greenColor);
 }
 
-.form-range{
-  background: ;
+.buttonFiltersSmall{
+  border: var(--greenColor) 2px solid;
+  font-weight: 600;
 }
+
+.custom-range::-moz-range-thumb {
+  background: var(--redColor);
+}
+
+.form-range::-moz-range-thumb:active {
+  background-color: var(--redColor);
+}
+
+#filters .form-check{
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+#filters .form-label{
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
 
 /* CSS cards home */
 .title-acme {
@@ -207,7 +245,7 @@ hr{
 }
 
 .textPrice{
-  color:#249F3F ;
+  color:var(--greenColor);
 }
 
 .textShop{
@@ -217,16 +255,16 @@ hr{
 
 .page-item .page-link{
   background:#fff5e1;
-  color:#323232;
-  border:#68D5E8 1px dashed;
+  color: var(--blackColor);
+  border:var(--skyBlue) 2px dashed;
 }
 
 .active .page-link{
-  background:#68D5E8;
+  background:var(--skyBlue);
   color:#323232;
 }
-/* CSS Products */
 
+/* CSS Products */
 .img {
   height: 12rem;
 }
@@ -243,6 +281,12 @@ hr{
   color: #323232;
   border: #9BE8F5;
   font-weight: 500;
+}
+
+#cardProduct .priceText{
+  color:#249F3F !important;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 

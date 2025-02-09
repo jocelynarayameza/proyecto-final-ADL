@@ -28,8 +28,8 @@ const NavbarComponent = () => {
     }
 
   return (
-    <Navbar expand="lg" sticky="top" id='navbarConfig'>
-      <Container fluid className='skyBlue p-1'>
+    <Navbar expand="lg" sticky="top" id='navbarConfig' className='p-0'>
+      <Container fluid className='p-1'>
       <Navbar.Brand to="/">
             <img
               alt="Vivi chibi"
@@ -43,7 +43,7 @@ const NavbarComponent = () => {
           
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="justify-content-end"/>
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end" >
-          <Nav className="justify-content-end textConfig">
+          <Nav className="justify-content-end textConfig ">
             <Nav.Link as={Link} className={activeLink==='home'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('home')} to="/">Home</Nav.Link>
             {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='profile'? 'backHover active navbar-link':'backHover'} onClick={()=>[ onUpdateActiveLink('profile'),setProfileActive('about-me')]} to="/perfil">Mi Perfil</Nav.Link>):null}
             {!userLogged===true ? (<Nav.Link as={Link} className={activeLink==='register'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('register')} to="/registro">Registro</Nav.Link>):null}

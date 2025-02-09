@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Container, Row, Col } from "react-bootstrap";
 
 const Filters = () => {
-  const filtros = [
+  const filtersCategorys = [
     "Figura",
     "Peluche",
     "Pixel Art",
@@ -14,7 +14,7 @@ const Filters = () => {
     "Ropa",
   ];
   return (
-
+    <div id="filters">
       <Container>
         <Row>
           <Col>
@@ -23,27 +23,28 @@ const Filters = () => {
         </Row>
         <Row>
           <Col  className=" bg-warning-subtle d-flex flex-column rounded-3" >
-            <h4 className="text-center p-3 categoryText">Categoría</h4>
+            <h4 className=" p-3 categoryText">Categoría</h4>
             <Form>
-              {filtros.map((filtro, index) => (
+              {filtersCategorys.map((filtersCategory, index) => (
                 <Form.Check
                   className="pb-3"
                   key={index}
                   type="checkbox"
                   id={index}
-                  label={filtro}
+                  label={filtersCategory}
                 />
               ))}
             </Form>
             <hr />
-            <h4 className="text-center pt-0 p-3 categoryText">Precio</h4>
-            <Form.Group>
-              <Form.Label>$0-100 </Form.Label>
-              <Form.Range min="0" max="1000" step="10" />
+            <h4 className=" pt-0 p-3 categoryText">Precio</h4>
+            <Form.Group className="px-3">
+              <Form.Label >$0 - $100.000 </Form.Label>
+              <Form.Range className="custom-range"min="0" max="100000" step="10" />
             </Form.Group>
           </Col>
         </Row>
       </Container>
+      </div>
   );
 };
 

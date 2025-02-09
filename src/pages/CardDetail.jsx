@@ -7,6 +7,7 @@ import { UserContext } from "../context/UserContext.jsx";
 const CardDetail = () => {
   const {user} = useContext(UserContext)
 
+
   const { id } = useParams();
   const [producto, setProducto] = useState({});
   const [contador, setContador] = useState(0);
