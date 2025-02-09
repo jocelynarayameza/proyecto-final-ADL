@@ -245,15 +245,22 @@ hr{
   color: var(--blackColor);
 }
 
-#filters .form-label{
+ .priceRange{
   font-weight: 600;
   font-size: 1.05rem;
-  color: var(--blackColor);
+  color: var(--greenColor);
 }
 
 .searchButtonHome{
   background-color: var(--greenColor);
 }
+
+.priceRangeText{
+  color: var(--blackColor);
+  font-weight: 600;
+}
+
+
 
 /* CSS cards home */
 .title-acme {
