@@ -525,3 +525,8 @@ hr{
   color: var(--blackColor);
   border: var(--skyBlue);
 }
+
+/* Cart Adress */
+#cartAdress{
+  border: var(--greenColor) solid;
+}

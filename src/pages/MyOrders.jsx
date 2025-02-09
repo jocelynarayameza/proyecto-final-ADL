@@ -22,7 +22,7 @@ const MyOrders = () => {
       <Container className=" mx-auto">
         <Row className="m-3 d-flex justify-content-center">
           <Col>
-            <h2 id='titleProfile'>Pedidos anteriores</h2>
+            <h2 id='titleProfile' className="my-2">Pedidos anteriores</h2>
           </Col>
         </Row>
         <Row className="m-3 d-flex justify-content-center">

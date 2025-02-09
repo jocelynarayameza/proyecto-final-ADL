@@ -6,7 +6,7 @@ import { Trash3 } from 'react-bootstrap-icons';
 import moogle from '../../assets/img/moogle.png'
 
 
-const cartCard = (product) => {
+const CartCard = (product) => {
   
   const precioFormat= product.price
   const count=product.total_quantity
@@ -68,4 +68,4 @@ const cartCard = (product) => {
   )
 }
 
-export default cartCard
+export default CartCard
