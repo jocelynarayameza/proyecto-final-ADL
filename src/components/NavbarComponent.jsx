@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/img/Vivi.png'
 import { UserContext } from '../context/UserContext';
 import { CartContext } from '../context/CartContext';
+import axios from 'axios';
 
 
 const NavbarComponent = () => {
@@ -23,7 +24,12 @@ const NavbarComponent = () => {
   }
 
   const logoutButton = async () => {
-    const res = await axios.get("http://localhost3001/logout");
+    const res = await axios.get("http://localhost3001/logout",{
+      headers:{
+        Authorization:`Bearer ${user.token}`,
+    },
+  });
+    setUser({logged:false});
     onUpdateActiveLink('home'); 
   }
 
@@ -47,10 +53,10 @@ const NavbarComponent = () => {
             <Nav.Link as={Link} className={activeLink==='home'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('home')} to="/">Home</Nav.Link>
             {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='profile'? 'backHover active navbar-link':'backHover'} onClick={()=>[ onUpdateActiveLink('profile'),setProfileActive('about-me')]} to="/perfil">Mi Perfil</Nav.Link>):null}
             {!userLogged===true ? (<Nav.Link as={Link} className={activeLink==='register'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('register')} to="/registro">Registro</Nav.Link>):null}
-            {!userLogged===true ? (<Nav.Link as={Link} className={activeLink==='login'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('login')} to="/login">Iniciar sesion</Nav.Link>):null}
+            {!userLogged===true ? (<Nav.Link as={Link} className={activeLink==='login'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('login')} to="/login">Iniciar sesión</Nav.Link>):null}
             {/* {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='newPost'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('newPost')} to="/perfil/nueva-venta">Nueva venta</Nav.Link>):null}
             {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='products'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('products')} to="/mis-productos">Mis productos</Nav.Link>):null} */}
-            {userLogged===true ? (<Nav.Link as={Link} className='backHover' onClick={logoutButton} to="/">Cerrar sesion</Nav.Link>):null}
+            {userLogged===true ? (<Nav.Link as={Link} className='backHover' onClick={logoutButton} to="/">Cerrar sesión</Nav.Link>):null}
             {userLogged===true ? (<Nav.Link as={Link} className={activeLink==='cart'? 'backHover active navbar-link':'backHover'} onClick={()=> onUpdateActiveLink('cart')} to="/carrito"><CartFill size={23}/> {totalOrder}</Nav.Link>):null}
             
           </Nav>

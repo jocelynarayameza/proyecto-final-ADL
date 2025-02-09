@@ -8,7 +8,7 @@ import { UserContext } from '../../context/UserContext';
 const MyAccountForm = () => {
 
   const {user,profileUserfunc}=useContext(UserContext)
-  profileUserfunc()
+  // profileUserfunc()
   const name=user.name;
   const nameChange=useInput("")
 
@@ -17,6 +17,8 @@ const MyAccountForm = () => {
 
   const username=user.username
   const birthday = user.birthday
+  console.log(birthday);
+  
 
   const password=useInput("");
   const passwordChange=useInput("");
@@ -46,22 +48,30 @@ const MyAccountForm = () => {
             <Col md={12} lg={6} className='px-5'>
               <Form.Group className="mb-3"  controlId="formBasicName">
                 <Form.Label>Nombre</Form.Label>
-                <Form.Control className='registerLoginColor' type="text" placeholder={name} {...nameChange} />
+                <Form.Control className='registerLoginColor' type="text"
+                placeholder={name} {...nameChange}
+                />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicLastName">
                 <Form.Label>Apellido</Form.Label>
-                <Form.Control className='registerLoginColor' type="text" placeholder={lastname} {...lastNameChange} />
+                <Form.Control className='registerLoginColor' type="text"
+                placeholder={lastname} {...lastNameChange}
+                />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicUsername">
                 <Form.Label>Nombre de usuario</Form.Label>
-                <Form.Control disabled className='registerLoginColor' type="text" placeholder={username}/>
+                <Form.Control disabled className='registerLoginColor' type="text"
+                placeholder={username}
+                />
               </Form.Group>
 
               <FormGroup className="mb-3" controlId="formBasicBirthday">
                 <Form.Label>Fecha de nacimiento</Form.Label>
-                <Form.Control disabled className='registerLoginColor' type="date" placeholder={birthday}/>
+                <Form.Control disabled className='registerLoginColor' type="text"
+                placeholder={birthday}
+                />
               </FormGroup>
 
      
@@ -74,17 +84,23 @@ const MyAccountForm = () => {
 
               <Form.Group className="mb-3" controlId="formBasicpasswordChange">
                 <Form.Label>Cambiar contraseña</Form.Label>
-                <Form.Control  className='registerLoginColor' type="text" placeholder="" {...passwordChange}/>
+                <Form.Control  className='registerLoginColor' type="text"
+                placeholder="" {...passwordChange}
+                />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Correo electronico</Form.Label>
-                <Form.Control disabled className='registerLoginColor' type="email" placeholder={email} />
+                <Form.Control disabled className='registerLoginColor' type="email"
+                placeholder={email}
+                />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmailChange">
                 <Form.Label>Cambiar correo electronico</Form.Label>
-                <Form.Control className='registerLoginColor' type="email" placeholder="" {...emailChange} />
+                <Form.Control className='registerLoginColor' type="email"
+                placeholder="" {...emailChange}
+                />
               </Form.Group>
             </Col>
           </Row>

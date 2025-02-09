@@ -7,7 +7,7 @@ const UserContext=createContext()
 const UserProvider = ({children}) => {
   const navigate = useNavigate()
 
-  const [user,setUser] = useState([])
+  const [user,setUser] = useState("")
 
 
     const registerUser = async (datos)  => {
@@ -40,30 +40,33 @@ const UserProvider = ({children}) => {
     } else if (res.data.msg="Contrasena incorrecta") {
       alert("Contrasena incorrecta")
     } else {
-      alert("No se pudo autenticar")
+      alert("No existe el usuario")
     }
   }
 
-  function profileUserfunc(){
-    useEffect(()=>{
-      const profileUser = async()=>{
-        const token= user.token
-        const res= await axios.get('http://localhost:3001/api/perfil',{
-          headers:{
-            Authorization:`Bearer ${token}`,
-        },
-      })
-      console.log("res", res.data);
-      
-        setUser(res.data)
-        console.log("user",user);
-        
-      }
-       profileUser() 
-    },[])
-  }
+  // const profileUser = async()=>{
+  //   const token= user.token
+  //   const res= await axios.get('http://localhost:3001/api/perfil',{
+  //     headers:{
+  //       Authorization:`Bearer ${token}`,
+  //   },
+  // })
+  // const userData=res.data;
+  // setUser({...userData, logged: true})
+  // }
 
-  return <UserContext.Provider value={{user,setUser,registerUser,logInUser,profileUserfunc}}>
+  // function profileUserfunc(){
+  //   useEffect(()=>{
+  //      profileUser()
+      //  console.log(userData);
+       
+      //  setUser(data)
+      //  console.log("user",user);
+  //   },[])
+  // }
+
+
+  return <UserContext.Provider value={{user,setUser,registerUser,logInUser}}>
   {children}
   </UserContext.Provider>
 
