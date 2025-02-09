@@ -6,48 +6,30 @@ import useInput from '../../assets/hooks/useInput';
 import { UserContext } from '../../context/UserContext';
 
 const MyAccountForm = () => {
-  const name=useInput("");
-  const lastName=useInput("");
+
+  const {user,profileUserfunc}=useContext(UserContext)
+  profileUserfunc()
+  const name=user.name;
+  const nameChange=useInput("")
+
+  const lastname=user.lastname;
+  const lastNameChange=useInput("")
+
+  const username=user.username
+  const birthday = user.birthday
+
   const password=useInput("");
   const passwordChange=useInput("");
-  const email=useInput("");
+
+  const email=user.email;
   const emailChange=useInput("");
 
+ 
 
-  const {registerUser}=useContext(UserContext)
-
-  
   
   
   const handleSubmit = (e)=> {
     e.preventDefault()
-
-
-    // if (password.value===passwordConfirm.value && password.value.length>=8){
-    //   passConfirmed=true
-    // } else if (password.value.length<8) {
-    //   alert("Contrasena tiene que tener 8 caracteres minimo")
-    // } else{
-    //   alert("Contrasenas no son iguales")
-    // }
-    // if (email.value===emailConfirm.value){
-    //   emailConfirmed=true
-    // }  else{
-    //   alert("Emails no son iguales")
-    // }
-    
-    // if(passConfirmed==true && emailConfirmed==true){
-    //   registerUser(
-    //     { email: email.value,
-    //       password: password.value,
-    //       username:username.value,
-    //       name: name.value,
-    //       lastName: lastName.value,
-    //       birthday: birthday.value
-    //     })
-    // }
-
-    
 
   }
 
@@ -64,22 +46,22 @@ const MyAccountForm = () => {
             <Col md={12} lg={6} className='px-5'>
               <Form.Group className="mb-3"  controlId="formBasicName">
                 <Form.Label>Nombre</Form.Label>
-                <Form.Control className='registerLoginColor' type="text" placeholder="Vivi" {...name} />
+                <Form.Control className='registerLoginColor' type="text" placeholder={name} {...nameChange} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicLastName">
                 <Form.Label>Apellido</Form.Label>
-                <Form.Control className='registerLoginColor' type="text" placeholder="Ornitier" {...lastName} />
+                <Form.Control className='registerLoginColor' type="text" placeholder={lastname} {...lastNameChange} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicUsername">
                 <Form.Label>Nombre de usuario</Form.Label>
-                <Form.Control disabled className='registerLoginColor' type="text" placeholder="Vivi_tienda"/>
+                <Form.Control disabled className='registerLoginColor' type="text" placeholder={username}/>
               </Form.Group>
 
               <FormGroup className="mb-3" controlId="formBasicBirthday">
                 <Form.Label>Fecha de nacimiento</Form.Label>
-                <Form.Control disabled className='registerLoginColor' type="date" placeholder=""/>
+                <Form.Control disabled className='registerLoginColor' type="date" placeholder={birthday}/>
               </FormGroup>
 
      
@@ -97,12 +79,12 @@ const MyAccountForm = () => {
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Correo electronico</Form.Label>
-                <Form.Control disabled className='registerLoginColor' type="email" placeholder="vivi@tienda.cl" />
+                <Form.Control disabled className='registerLoginColor' type="email" placeholder={email} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmailChange">
                 <Form.Label>Cambiar correo electronico</Form.Label>
-                <Form.Control className='registerLoginColor' type="email" placeholder="vivi@tienda.cl" {...emailChange} />
+                <Form.Control className='registerLoginColor' type="email" placeholder="" {...emailChange} />
               </Form.Group>
             </Col>
           </Row>

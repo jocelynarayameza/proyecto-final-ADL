@@ -22,13 +22,13 @@ const NavbarComponent = () => {
     setActiveLink(value);
   }
 
-    const logoutButton = () => {
-      setUser([])
-      onUpdateActiveLink('home'); 
-    }
+  const logoutButton = async () => {
+    const res = await axios.get("http://localhost3001/logout");
+    onUpdateActiveLink('home'); 
+  }
 
   return (
-    <Navbar expand="lg" sticky="top" id='navbarConfig' className='p-0'>
+    <Navbar expand="lg" sticky="top" id='navbarConfig' className='p-0 mt-0'>
       <Container fluid className='p-1'>
       <Navbar.Brand to="/">
             <img

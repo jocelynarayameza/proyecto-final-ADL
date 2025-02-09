@@ -11,15 +11,15 @@ const UserProvider = ({children}) => {
 
 
     const registerUser = async (datos)  => {
-      const response= await axios.post("http://localhost:3001/api/registro",{email: datos.email, email_confirm:datos.email_confirm,
+      const res= await axios.post("http://localhost:3001/api/registro",{email: datos.email, email_confirm:datos.email_confirm,
         password: datos.password,
         password_confirm:datos.password_confirm,
         username:datos.username,
         name: datos.name,
         lastname: datos.lastname,
         birthday: datos.birthday})
-      localStorage.setItem("token", response.data.token)
-      if (response.data.message=='Registrado satisfactoriamente'){
+      localStorage.setItem("token", res.data.token)
+      if (res.data.msg=='Registrado satisfactoriamente'){
         alert("Registro correcto")
       } else {
         alert("Usuario ya existe")
@@ -28,26 +28,42 @@ const UserProvider = ({children}) => {
 
 
   const logInUser = async (datos) => {
-    const response= await axios.post("http://localhost:3001//api/login", {email: datos.email, password: datos.password})
-    localStorage.setItem("token", response.data.token)
+    const res= await axios.post("http://localhost:3001/api/login", {email: datos.email, password: datos.password})
+    localStorage.setItem("token", res.data.token)
     
-    if (response.data.msg=="Autentificacion correcta"){
-      setUser( {email: response.data.email, logged: true, token: response.data.token})
+    if (res.data.msg=="Autentificacion correcta"){
+      setUser( {email: res.data.email, logged: true, token: res.data.token})
       navigate('/')
 
       
       alert("Autentificacion correcta")
-    } else if (response.data.msg="Contrasena incorrecta") {
+    } else if (res.data.msg="Contrasena incorrecta") {
       alert("Contrasena incorrecta")
     } else {
       alert("No se pudo autenticar")
     }
-    
-  
   }
 
+  function profileUserfunc(){
+    useEffect(()=>{
+      const profileUser = async()=>{
+        const token= user.token
+        const res= await axios.get('http://localhost:3001/api/perfil',{
+          headers:{
+            Authorization:`Bearer ${token}`,
+        },
+      })
+      console.log("res", res.data);
+      
+        setUser(res.data)
+        console.log("user",user);
+        
+      }
+       profileUser() 
+    },[])
+  }
 
-  return <UserContext.Provider value={{user,setUser,registerUser,logInUser}}>
+  return <UserContext.Provider value={{user,setUser,registerUser,logInUser,profileUserfunc}}>
   {children}
   </UserContext.Provider>
 

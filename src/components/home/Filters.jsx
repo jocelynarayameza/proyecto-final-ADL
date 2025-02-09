@@ -4,9 +4,11 @@ import { Form, Container, Row, Col } from "react-bootstrap";
 const Filters = () => {
   const [valueMin, setValueMin] = useState(0);
   const [valueMax, setValueMax] = useState(0);
-  console.log(valueMin,valueMax);
+
   const valueMinCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(valueMin)
   const valueMaxCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(valueMax)
+
+
   const filtersArray = [
     "Figura",
     "Peluche",
@@ -32,7 +34,7 @@ const Filters = () => {
             <Form>
               {filtersArray.map((filter, index) => (
                 <Form.Check
-                  className="pb-3"
+                  className="pb-3 formCheckColor"
                   key={index}
                   type="checkbox"
                   id={index}
