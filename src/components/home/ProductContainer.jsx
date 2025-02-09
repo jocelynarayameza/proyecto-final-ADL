@@ -6,7 +6,7 @@ import { Container, Row, Col, Form, Button, Offcanvas } from "react-bootstrap";
 import { useState } from "react";
 import { Funnel, Search } from "react-bootstrap-icons";
 
-const ProductContainer = ({ productos }) => {
+const ProductContainer = ({ products }) => {
 
   const [showFilters, setShowFilters] = useState(false);
 
@@ -46,13 +46,13 @@ const ProductContainer = ({ productos }) => {
       </Container>
       <Container fluid>
          <Col className="d-flex flex-wrap justify-content-around">
-            {productos.map((prod) => (
+            {products.map((prod) => (
               <ProductCard key={prod.id} {...prod} />
             ))}
           </Col>
 
         <Col className="d-flex justify-content-center m-4">
-          <PaginationComponent productos={productos} />
+          <PaginationComponent productos={products} />
         </Col>
       </Container>
     </>
