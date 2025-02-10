@@ -49,17 +49,10 @@ const CardDetail = () => {
               </Col>
               <Col>
 
-<<<<<<< HEAD
                 <h2 className="title-acme">{product.product_nombre}</h2>
                 <h1 className="textPrice pb-2"> ${product.product_precio} CLP</h1>
                 <h4 className="pb-2 textShop">Vendido por: {product.product_seller}</h4>
                 <p className="pb-5">Descripción: {product.product_description}</p>
-=======
-                <h2 className="title-acme">{product.nombre}</h2>
-                <h1 className="textPrice pb-2"> ${product.precio} CLP</h1>
-                <h4 className="pb-2 textShop">Vendido por: {product.vendedor}</h4>
-                <p className="pb-5">Descripción: {product.descripcion}</p>
->>>>>>> be3a5daeb189ea0ca9c479746a7999947051824c
                 <div>
                   <p>Cantidad disponible: {product.product_quantity}</p>
                   <div className="d-flex align-items-baseline">
