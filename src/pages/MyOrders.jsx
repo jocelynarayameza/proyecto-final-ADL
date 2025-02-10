@@ -8,13 +8,23 @@ const MyOrders = () => {
 
   const [orders, setOrders] = useState([]);
   
+  const {user}=useContext(UserContext)
+
   useEffect(() => {
     const fetchOrders = async () => {
-      const data = await getOrders();
-      setOrders(data);
-    }
+      try {
+        const response = await axios.get("http://localhost:3001/api/mis-pedidos", {
+          headers: { Authorization: `Bearer ${user.token}` }
+        });
+        setOrders(response.data);
+        console.log(response.data)
+      } catch (error) {
+        console.log(error)
+      }
+      
+    };
     fetchOrders();
-  },[])
+  }, [user.token]);
 
   return (
     <div>
