@@ -34,7 +34,6 @@ const CartProvider = ({children}) => {
   useEffect (()=>{
     getData()
   },[])
-  
 
   return <CartContext.Provider value={{cart,setCart,totalCLP,totalDelivery,totalDiscount, totalCart, totalOrder,setDiscount}}>
     {children}
