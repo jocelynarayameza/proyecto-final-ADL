@@ -32,7 +32,7 @@ const PostContainer = () => {
     <Container>
       <Row className="m-3 d-flex justify-content-center">
         <Col>
-          <h2 className="title-acme">Mis productos</h2>
+          <h2 id='titleProfile' className="my-2">Mis productos</h2>
         </Col>
       </Row>
       <Row className="m-3 d-flex justify-content-center">

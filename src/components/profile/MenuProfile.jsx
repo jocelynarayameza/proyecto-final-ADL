@@ -16,7 +16,7 @@ const MenuProfile = () => {
   
 
   return (
-    <div id='menuProfile' className='yellowColor py-0'>
+    <div id='menuProfile' className='yellowColor'>
       <Container>
         <Row>
           <Col xs={12} sm={3} className=''>

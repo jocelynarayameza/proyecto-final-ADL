@@ -24,7 +24,7 @@ const CartProvider = ({children}) => {
 
   const getData = async () =>{
     const data= await ProductsCart()
-    // const response= await axios.get("http://localhost:3001/carrito")
+    // const response= await axios.get("http://localhost:3001//api/carrito")
     // console.log(response.data);
     
     let newData=data.map(item =>({...item, total_quantity:1, add:true}))
@@ -34,7 +34,6 @@ const CartProvider = ({children}) => {
   useEffect (()=>{
     getData()
   },[])
-  
 
   return <CartContext.Provider value={{cart,setCart,totalCLP,totalDelivery,totalDiscount, totalCart, totalOrder,setDiscount}}>
     {children}

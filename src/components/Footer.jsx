@@ -21,28 +21,28 @@ const Footer = () => {
           <Col xs={6} sm={4} className='mt-4'>
             <h5>¡Visitanos!</h5>
             <Row xs="auto">
-              <Col xs={1} className='me-2'>
+              <Col xs={1} className='me-2 mb-2'>
                 <Facebook size={25}/>
               </Col>
               <Col xs="auto">
-                <p className='footerTextSocialContact'>Facebook</p>
+                <a href='www.facebook.com/FF_market' className='footerTextSocialContact'>Facebook</a>
               </Col>
             </Row>
             <Row xs="auto">
-              <Col xs={1} className='me-2'>
+              <Col xs={1} className='me-2 mb-2'>
                 <Instagram size={25}/>
               </Col>
               <Col>
-                <p className='footerTextSocialContact'>Instagram</p>
+                <a href='www.instagram.com/FF_market' className='footerTextSocialContact'>Instagram</a>
               </Col>
             </Row>
 
             <Row xs="auto">
-              <Col xs={1} className='me-2'>
+              <Col xs={1} className='me-2 mb-2'>
                 <TwitterX size={25}/>
               </Col>
               <Col xs="auto">
-              <p className='footerTextSocialContact'>Twitter/X</p>
+              <a href='www.x.com/FF_market' className='footerTextSocialContact'>Twitter/X</a>
               </Col>
             </Row>
           </Col>

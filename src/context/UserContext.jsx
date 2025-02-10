@@ -7,19 +7,19 @@ const UserContext=createContext()
 const UserProvider = ({children}) => {
   const navigate = useNavigate()
 
-  const [user,setUser] = useState([])
+  const [user,setUser] = useState("")
 
 
     const registerUser = async (datos)  => {
-      const response= await axios.post("http://localhost:3001/api/registro",{email: datos.email, email_confirm:datos.email_confirm,
+      const res= await axios.post("http://localhost:3001/api/registro",{email: datos.email, email_confirm:datos.email_confirm,
         password: datos.password,
         password_confirm:datos.password_confirm,
         username:datos.username,
         name: datos.name,
         lastname: datos.lastname,
         birthday: datos.birthday})
-      localStorage.setItem("token", response.data.token)
-      if (response.data.message=='Registrado satisfactoriamente'){
+      localStorage.setItem("token", res.data.token)
+      if (res.data.msg=='Registrado satisfactoriamente'){
         alert("Registro correcto")
       } else {
         alert("Usuario ya existe")
@@ -28,23 +28,42 @@ const UserProvider = ({children}) => {
 
 
   const logInUser = async (datos) => {
-    const response= await axios.post("http://localhost:3001/api/login", {email: datos.email, password: datos.password})
-    localStorage.setItem("token", response.data.token)
+    const res= await axios.post("http://localhost:3001/api/login", {email: datos.email, password: datos.password})
+    localStorage.setItem("token", res.data.token)
     
-    if (response.data.msg=="Autentificacion correcta"){
-      setUser( {email: response.data.email, logged: true, token: response.data.token})
+    if (res.data.msg=="Autentificacion correcta"){
+      setUser( {email: res.data.email, logged: true, token: res.data.token})
       navigate('/')
 
       
       alert("Autentificacion correcta")
-    } else if (response.data.msg="Contrasena incorrecta") {
+    } else if (res.data.msg="Contrasena incorrecta") {
       alert("Contrasena incorrecta")
     } else {
-      alert("No se pudo autenticar")
+      alert("No existe el usuario")
     }
-    
-  
   }
+
+  // const profileUser = async()=>{
+  //   const token= user.token
+  //   const res= await axios.get('http://localhost:3001/api/perfil',{
+  //     headers:{
+  //       Authorization:`Bearer ${token}`,
+  //   },
+  // })
+  // const userData=res.data;
+  // setUser({...userData, logged: true})
+  // }
+
+  // function profileUserfunc(){
+  //   useEffect(()=>{
+  //      profileUser()
+      //  console.log(userData);
+       
+      //  setUser(data)
+      //  console.log("user",user);
+  //   },[])
+  // }
 
 
   return <UserContext.Provider value={{user,setUser,registerUser,logInUser}}>

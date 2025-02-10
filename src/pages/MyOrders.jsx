@@ -29,10 +29,10 @@ const MyOrders = () => {
   return (
     <div>
       <MenuProfile />
-      <Container className="w-75 mx-auto">
+      <Container className=" mx-auto">
         <Row className="m-3 d-flex justify-content-center">
           <Col>
-            <h2 className="title-acme">Pedidos anteriores</h2>
+            <h2 id='titleProfile' className="my-2">Pedidos anteriores</h2>
           </Col>
         </Row>
         <Row className="m-3 d-flex justify-content-center">

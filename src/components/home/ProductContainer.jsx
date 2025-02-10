@@ -3,6 +3,7 @@ import Filters from "./Filters";
 import ProductCard from "./ProductCard";
 import PaginationComponent from "./Pagination";
 import { Container, Row, Col, Form, Button, Offcanvas } from "react-bootstrap";
+import { Funnel, Search } from "react-bootstrap-icons";
 
 const ProductContainer = ({ products }) => {
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -55,58 +56,49 @@ const ProductContainer = ({ products }) => {
 
   return (
     <>
-      <Container fluid className="mt-4">
-        <Row className="ms-2">
-          <Col className="d-md-none mb-3 text-center">
-            <Button variant="warning" onClick={() => setShowFilters(true)}>
-              Filtrar
-            </Button>
+    <Container>
+      <Row className="ms-2">
+        <Col xs={12} sm={12} md={6} >
+          <Form.Group className="d-flex mb-2">
+            <Form.Control className="searchOrderBy" size="md" type="text" placeholder="Buscar" value={search} onChange={(e) => setSearch(e.target.value)} />
+            <Button variant="success border-2 searchButtonHome"><Search size={20}/></Button>
+          </Form.Group>
+        </Col>
+
+        <Col xs={6} className="mb-2">
+          <Form.Select size="md" className="searchOrderBy" aria-label="Default select example" onChange={handleSort}>
+            <option value="">Ordenar por</option>
+            <option value="asc">Menor a mayor precio</option>
+            <option value="desc">Mayor a menor precio</option>
+          </Form.Select>
+        </Col>
+
+        <Col xs={6} className="d-md-none text-center pb-0 mb-2">
+          <Button variant="outline-success" className="buttonFiltersSmall d-flex" onClick={() => setShowFilters(true)}>
+            <p className="mb-0"> Filtros</p>
+            <Funnel size={20}/>
+          </Button>
+        </Col>
+
+        <Offcanvas show={showFilters} onHide={() => setShowFilters(false)}>
+          <Offcanvas.Header closeButton></Offcanvas.Header>
+          <Offcanvas.Body>
+            <Filters filterChange={handleCategoryChange}  />
+          </Offcanvas.Body>
+        </Offcanvas>
+        </Row>
+      </Container>
+
+      <Container fluid>
+         <Col className="d-flex flex-wrap justify-content-around">
+            {filteredProducts.map((prod,index) => (
+              <ProductCard key={index} {...prod} />
+            ))}
           </Col>
 
-          <Offcanvas show={showFilters} onHide={() => setShowFilters(false)}>
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title>Filtros</Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Filters filterChange={handleCategoryChange} />
-            </Offcanvas.Body>
-          </Offcanvas>
-          <Col lg={2} md={3} className="d-none d-md-block">
-            <Filters filterChange={handleCategoryChange} />
-          </Col>
-          <Col lg={10} md={9}>
-            <Row className="justify-content-center">
-              <div className="d-flex gap-5 w-50">
-                <Form.Select
-                  onChange={handleSort}
-                  size="sm"
-                  className="searchOrderBy"
-                  aria-label="Default select example"
-                >
-                  <option value="">Ordenar por</option>
-                  <option value="asc">Menor a mayor precio</option>
-                  <option value="desc">Mayor a menor precio</option>
-                </Form.Select>
-                <Form.Control
-                  className="searchOrderBy"
-                  size="sm"
-                  type="text"
-                  placeholder="Buscar"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-              </div>
-            </Row>
-            <Col className="d-flex flex-wrap justify-content-around m-3">
-              {filteredProducts.map((prod) => (
-                <ProductCard key={prod.id_product} {...prod} />
-              ))}
-            </Col>
-            <Col className="d-flex justify-content-center m-4">
-              <PaginationComponent products={filteredProducts} />
-            </Col>
-          </Col>
-        </Row>
+        <Col className="d-flex justify-content-center m-4">
+          <PaginationComponent productos={filteredProducts} />
+        </Col>
       </Container>
     </>
   );
