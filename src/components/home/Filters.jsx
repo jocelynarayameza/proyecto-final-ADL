@@ -21,7 +21,7 @@ const Filters = () => {
     "Ropa",
   ];
   return (
-    <div id="filters">
+    <div id="filters" className="mb-2">
       <Container>
         <Row>
           <Col>
