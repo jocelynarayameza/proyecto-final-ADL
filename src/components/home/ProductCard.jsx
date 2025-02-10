@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 
-const ProductCard = ({ nombre, precio, foto, id }) => {
+const ProductCard = ({ product_name, product_price, product_photo, id_product }) => {
   const {user} = useContext(UserContext)
   const navigate = useNavigate();
   const details = (idProduct) => {
@@ -12,14 +12,16 @@ const ProductCard = ({ nombre, precio, foto, id }) => {
   }
   return (
     <Card style={{ width: "16rem" }} className="m-5 p-3 border-2 border border-danger-subtle">
-      <Card.Img variant="top" src= {foto} className="img img-fluid"  />
+      <Card.Img variant="top" src= {product_photo} className="img img-fluid"  />
       <Card.Body>
-        <Card.Title className="title-acme">{nombre}</Card.Title>
+        <Card.Title className="title-acme">{product_name}</Card.Title>
         <Card.Text>
-          ${precio}
+          ${product_price}
         </Card.Text>
-        <Button variant="info" className="mb-2 goDetails px-4" onClick={() => details(id)}>Ver detalles</Button>
-        <Button disabled={user.logged ? "":"false"} variant="warning" className="addCartButton" >Agregar al carrito</Button>
+        <Button variant="info" className="mb-2 goDetails px-4" onClick={() => details(id_product)}>Ver detalles</Button>
+        <Button 
+        // disabled={user.logged ? "":"false"} 
+        variant="warning" className="addCartButton" >Agregar al carrito</Button>
       </Card.Body>
     </Card>
   );

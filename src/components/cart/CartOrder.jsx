@@ -5,6 +5,7 @@ import { CartContext } from '../../context/CartContext'
 import useInput from '../../assets/hooks/useInput'
 
 const cartOrders = () => {
+  
   const {cart,totalCart,totalCLP,totalDelivery,totalDiscount,totalOrder,setDiscount}=useContext(CartContext)
   const cuponDiscount = useInput("")
 

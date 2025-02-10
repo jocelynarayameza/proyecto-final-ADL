@@ -1,12 +1,18 @@
 import { useState, useEffect } from "react";
-import { getProducts } from "../../mockproducts";
+import axios from "axios";
 const useFetchProducts = () => {
     const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const data = await getProducts();
-      setProducts(data);
+      try {
+        const response = await axios.get("http://localhost:3001/api/productos");
+        setProducts(response.data);
+        console.log(response.data)
+      } catch (error) {
+        console.log(error)
+      }
+      
     };
     fetchProducts();
   }, []);

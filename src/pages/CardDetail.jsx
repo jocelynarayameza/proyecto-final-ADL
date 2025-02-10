@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getProducts } from "../mockproducts.js";
+import axios from "axios";
 import { Image, Button, Col, Row, Container } from "react-bootstrap";
 import { UserContext } from "../context/UserContext.jsx";
 const CardDetail = () => {
@@ -22,12 +22,19 @@ const CardDetail = () => {
   };
 
   useEffect(() => {
-    const products = async () => {
-      const data = await getProducts();
-      const productFound = data.find((prod) => prod.id === Number(id));
-      setProduct(productFound);
+
+    const product = async () => {
+      try {
+      const id_params = Number(id)
+      const productFound = await axios.get(`http://localhost:3001/api/productos/${id_params}`)
+      console.log(productFound.data)
+      setProduct(productFound.data);
+      } catch (error) {
+        console.error("Error al obtener el producto:", error);
+      }
+      
     };
-    products();
+    product();
   }, [id]);
 
   return (
@@ -38,16 +45,16 @@ const CardDetail = () => {
           <Col className="border border-2 border-danger-subtle p-4">
             <Row className="align-items-center my-4">
               <Col className="text-center pe-4 mb-5" md={6} sm={12}>
-                <Image src={product.foto} className="w-75" />
+                <Image src={product.product_photo} className="w-75" />
               </Col>
               <Col>
 
-                <h2 className="title-acme">{producto.nombre}</h2>
-                <h1 className="textPrice pb-2"> ${producto.precio} CLP</h1>
-                <h4 className="pb-2 textShop">Vendido por: {producto.vendedor}</h4>
-                <p className="pb-5">Descripción: {producto.descripcion}</p>
+                <h2 className="title-acme">{product.product_nombre}</h2>
+                <h1 className="textPrice pb-2"> ${product.product_precio} CLP</h1>
+                <h4 className="pb-2 textShop">Vendido por: {product.product_seller}</h4>
+                <p className="pb-5">Descripción: {product.product_description}</p>
                 <div>
-                  <p>Cantidad disponible: {product.cantidad}</p>
+                  <p>Cantidad disponible: {product.product_quantity}</p>
                   <div className="d-flex align-items-baseline">
                     <Button variant="light" onClick={decreaseQuantity}>
                       -
