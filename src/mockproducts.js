@@ -61,7 +61,7 @@ const products = [{
     product_description: 'Pin approx personajes de FFXIV Haurchefant.Origen: Indonesia',
     product_quantity: 2,
     seller:'RoninsArt'
-];
+}];
 
 export const getProducts = async () => {
     return products
