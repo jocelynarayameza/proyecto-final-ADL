@@ -279,7 +279,7 @@ hr{
 .page-item .page-link{
   background:#fff5e1;
   color: var(--blackColor);
-  border:var(--skyBlue) 2px dashed;
+  border:var(--skyBlue) 2px solid;
 }
 
 .active .page-link{

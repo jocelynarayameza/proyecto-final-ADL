@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const UserContext=createContext()
 
@@ -17,12 +18,23 @@ const UserProvider = ({children}) => {
         username:datos.username,
         name: datos.name,
         lastname: datos.lastname,
-        birthday: datos.birthday})
+        birthday: datos.birthday,
+        adress:""})
       localStorage.setItem("token", res.data.token)
       if (res.data.msg=='Registrado satisfactoriamente'){
-        alert("Registro correcto")
+        Swal.fire({
+          title: "Registro correcto",
+          icon: "success",
+          confirmButtonColor: "#68D5E8",
+          color:"#323232"
+        })
       } else {
-        alert("Usuario ya existe")
+        Swal.fire({
+          title: "Usuario ya existe",
+          icon: "error",
+          confirmButtonColor: "#68D5E8",
+          color:"#323232"
+        })
       }
     }
 
@@ -36,11 +48,26 @@ const UserProvider = ({children}) => {
       navigate('/')
 
       
-      alert("Autentificacion correcta")
+      Swal.fire({
+        title: "Autentificacion correcta",
+        icon: "success",
+        confirmButtonColor: "#68D5E8",
+        color:"#323232"
+      })
     } else if (res.data.msg="Contrasena incorrecta") {
-      alert("Contrasena incorrecta")
-    } else {
-      alert("No existe el usuario")
+      Swal.fire({
+        title: "Contrasena incorrecta",
+        icon: "error",
+        confirmButtonColor: "#68D5E8",
+        color:"#323232"
+      })
+    } else if(res.data.msg="No existe el usuario"){
+      Swal.fire({
+        title: "No existe el usuario",
+        icon: "error",
+        confirmButtonColor: "#68D5E8",
+        color:"#323232"
+      })
     }
   }
 
