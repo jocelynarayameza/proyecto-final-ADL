@@ -17,7 +17,6 @@ const MyAccountForm = () => {
 
   const username=user.username
   const birthday = user.birthday
-  console.log(birthday);
   
 
   const password=useInput("");

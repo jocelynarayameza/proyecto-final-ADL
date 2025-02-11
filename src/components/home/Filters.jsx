@@ -3,14 +3,15 @@ import { Form, Container, Row, Col } from "react-bootstrap";
 
 const Filters = ({ filterChange }) => {
   const [categories, setCategories] = useState([]);
-  const [priceRange, setPriceRange] = useState([0, 200000]);
+  const [priceRange, setPriceRange] = useState(200000);
 
   const [valueMin, setValueMin] = useState(0);
   const [valueMax, setValueMax] = useState(0);
 
   const valueMinCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(valueMin)
-  const valueMaxCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(priceRange[1])
-
+  const valueMaxCLP= new Intl.NumberFormat('es-CL', {currency: 'CLP', style: 'currency'}).format(priceRange)
+  console.log(priceRange);
+  
 
   const filtersArray = [
     "Figura",
@@ -37,7 +38,7 @@ const Filters = ({ filterChange }) => {
 
   const handlePrice = (e) => {
     const value = e.target.value;
-    setPriceRange([0, value]);
+    setPriceRange(value);
   };
 
   useEffect(() => {
@@ -81,8 +82,9 @@ const Filters = ({ filterChange }) => {
             </Form.Group>
             <Form.Group className="px-3">
               <Form.Label className="priceRangeText">Precio máximo: <span className="priceRange">{valueMaxCLP}</span></Form.Label>
-              <Form.Range className="custom-range" min="0" max="100000" step="1000" value={priceRange[1]}
-              onChange={handlePrice}/></Form.Group>
+              <Form.Range className="custom-range" min={0} max={300000} step={1000} value={priceRange}
+              onChange={handlePrice}/>
+            </Form.Group>
         </Col>
       </Row>
     </Container>
